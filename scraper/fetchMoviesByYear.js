@@ -1,6 +1,5 @@
 // ============================================================
 // PHASE 1: Discover all Tamil movie TMDB IDs year by year
-// Saves results to checkpoint.json for Phase 2 to use
 // ============================================================
 
 const axios = require("axios");
@@ -12,9 +11,9 @@ const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const CHECKPOINT_FILE = path.join(__dirname, "checkpoint.json");
 const BASE_URL = "https://api.themoviedb.org/3";
 
-// Year range: 2026 → 2026
+// Year range: 2026 → 2024
 const START_YEAR = 2026;
-const END_YEAR = 1940;
+const END_YEAR = 2024;
 const DELAY_MS = 300; 
 
 // ── Helpers ──────────────────────────────────────────────────

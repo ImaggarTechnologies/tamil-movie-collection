@@ -1,6 +1,6 @@
 {
-  "phase": 2,
-  "lastCompletedYear": 2026,
+  "phase": 1,
+  "lastCompletedYear": 2024,
   "movieIds": [
     {
       "tmdb_id": 1324688,
@@ -415,9 +415,3333 @@
       "title": "Anali",
       "release_date": "2026-01-02",
       "year": 2026
+    },
+    {
+      "tmdb_id": 1554304,
+      "title": "Francis: Chapter 1",
+      "release_date": "2025-12-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1487142,
+      "title": "Sirai",
+      "release_date": "2025-12-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1413333,
+      "title": "Retta Thala",
+      "release_date": "2025-12-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1564672,
+      "title": "Kombuseevi",
+      "release_date": "2025-12-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1310458,
+      "title": "Saayavanam",
+      "release_date": "2025-12-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 985354,
+      "title": "UnPaarvayil",
+      "release_date": "2025-12-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1597781,
+      "title": "Pechi",
+      "release_date": "2025-12-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1595744,
+      "title": "Yaru Potta Kodu",
+      "release_date": "2025-12-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1592043,
+      "title": "Mahasenha",
+      "release_date": "2025-12-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1594436,
+      "title": "Rider",
+      "release_date": "2025-12-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1593648,
+      "title": "Half Boil",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1593062,
+      "title": "Saaraa",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1592772,
+      "title": "Geethai",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1591730,
+      "title": "Konja Naal Poru Thaliva",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1586614,
+      "title": "Kannagi Nagar",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1561955,
+      "title": "Stephen",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1369654,
+      "title": "Angammal",
+      "release_date": "2025-12-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1123859,
+      "title": "Blues",
+      "release_date": "2025-12-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1620037,
+      "title": "Joe's Cafe",
+      "release_date": "2025-12-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1589864,
+      "title": "The Prediction",
+      "release_date": "2025-11-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1638930,
+      "title": "Ondimuniyum Nallapaadanum",
+      "release_date": "2025-11-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1602372,
+      "title": "FRIDAY",
+      "release_date": "2025-11-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1586508,
+      "title": "BP 180",
+      "release_date": "2025-11-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1565650,
+      "title": "IPL",
+      "release_date": "2025-11-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1074048,
+      "title": "Revolver Rita",
+      "release_date": "2025-11-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1555298,
+      "title": "Rajini Gaang",
+      "release_date": "2025-11-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1608032,
+      "title": "Yellow",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1595756,
+      "title": "Poonga",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1584857,
+      "title": "Murugesan +2",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1578379,
+      "title": "Iravin Vizhigal",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1566666,
+      "title": "Middle Class",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1314278,
+      "title": "Mask",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 946040,
+      "title": "Theeyavar Kulaigal Nadunga",
+      "release_date": "2025-11-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1567963,
+      "title": "Auto Queens",
+      "release_date": "2025-11-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1581336,
+      "title": "Kinaru",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1566713,
+      "title": "Irul Inithu (Mirk)",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1544976,
+      "title": "Kumki 2",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1544547,
+      "title": "Madharas Mafia Company",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1541503,
+      "title": "Dawood",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1377961,
+      "title": "Spirit of the Flesh",
+      "release_date": "2025-11-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1404000,
+      "title": "Macai",
+      "release_date": "2025-11-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1250508,
+      "title": "Kaantha",
+      "release_date": "2025-11-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1523371,
+      "title": "Malaki Duwe Numba",
+      "release_date": "2025-11-08",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1575832,
+      "title": "Lament",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1565129,
+      "title": "Cristina Kathirvelan",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1562299,
+      "title": "Parrisu",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1551992,
+      "title": "Vattakhanal",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1531058,
+      "title": "Others",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1489510,
+      "title": "Aaromaley",
+      "release_date": "2025-11-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1607699,
+      "title": "Metro Kadhal",
+      "release_date": "2025-11-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1562718,
+      "title": "THADAI ATHAI UDAI",
+      "release_date": "2025-10-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1435139,
+      "title": "Aan Paavam Pollathathu",
+      "release_date": "2025-10-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1318308,
+      "title": "Aaryan",
+      "release_date": "2025-10-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1576690,
+      "title": "Irudhi Strike",
+      "release_date": "2025-10-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1565017,
+      "title": "The Last Endless Night",
+      "release_date": "2025-10-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1557086,
+      "title": "The Well",
+      "release_date": "2025-10-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1570608,
+      "title": "The Tiffin Box",
+      "release_date": "2025-10-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1565132,
+      "title": "Dear Jeeva: An Unconditional Love Story",
+      "release_date": "2025-10-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1562008,
+      "title": "Game of Loans",
+      "release_date": "2025-10-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1560204,
+      "title": "Kambi Katna Kathai",
+      "release_date": "2025-10-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1321108,
+      "title": "Dude",
+      "release_date": "2025-10-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1257957,
+      "title": "Bison Kaalamaadan",
+      "release_date": "2025-10-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 985379,
+      "title": "Diesel",
+      "release_date": "2025-10-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1612499,
+      "title": "Rambo",
+      "release_date": "2025-10-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1559092,
+      "title": "Will",
+      "release_date": "2025-10-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1558252,
+      "title": "Irudhi Muyarchi",
+      "release_date": "2025-10-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1553472,
+      "title": "Marutham",
+      "release_date": "2025-10-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1433133,
+      "title": "Rambo",
+      "release_date": "2025-10-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1551146,
+      "title": "Maria",
+      "release_date": "2025-10-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1561399,
+      "title": "EMPTY BAG",
+      "release_date": "2025-10-02",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1323880,
+      "title": "Idli Kadai",
+      "release_date": "2025-10-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1598608,
+      "title": "Wrapped-Oru Arimugam",
+      "release_date": "2025-09-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1643767,
+      "title": "Panai",
+      "release_date": "2025-09-26",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1551138,
+      "title": "Right",
+      "release_date": "2025-09-26",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1548586,
+      "title": "Kutram Thavir",
+      "release_date": "2025-09-26",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1425630,
+      "title": "Shakthi Thirumagan",
+      "release_date": "2025-09-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1299039,
+      "title": "Kiss",
+      "release_date": "2025-09-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1091043,
+      "title": "Thandakaaranyam",
+      "release_date": "2025-09-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1538926,
+      "title": "Dalit Subbaiah: Voice of the Rebels",
+      "release_date": "2025-09-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1501962,
+      "title": "Unn Kangalin Vattathil Naan",
+      "release_date": "2025-09-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1549411,
+      "title": "Sprout",
+      "release_date": "2025-09-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1542842,
+      "title": "Andha 7 Naatkal",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1542183,
+      "title": "Yolo",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1540782,
+      "title": "Kaayal",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1540478,
+      "title": "Madurai 16",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1534309,
+      "title": "Kumaara Sambavam",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1499180,
+      "title": "Bomb",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1090991,
+      "title": "Thanal",
+      "release_date": "2025-09-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1543249,
+      "title": "Arachioothuna Kuzhambu",
+      "release_date": "2025-09-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1506282,
+      "title": "Gandhi Kannadi",
+      "release_date": "2025-09-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1403839,
+      "title": "Bad Girl",
+      "release_date": "2025-09-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1297181,
+      "title": "Madharaasi",
+      "release_date": "2025-09-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1553052,
+      "title": "The Savage",
+      "release_date": "2025-09-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1538920,
+      "title": "Pugaiyaadal",
+      "release_date": "2025-08-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1536654,
+      "title": "Pei Kathai",
+      "release_date": "2025-08-29",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1534185,
+      "title": "Sotta Sotta Nanaiyuthu",
+      "release_date": "2025-08-29",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1530657,
+      "title": "Kuttram Pudhithu",
+      "release_date": "2025-08-29",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1478844,
+      "title": "Kadukka",
+      "release_date": "2025-08-29",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1569004,
+      "title": "AlExperience",
+      "release_date": "2025-08-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1527352,
+      "title": "The Show Man",
+      "release_date": "2025-08-22",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1225968,
+      "title": "Indra",
+      "release_date": "2025-08-22",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1530918,
+      "title": "Good Day",
+      "release_date": "2025-08-15",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1153399,
+      "title": "Coolie",
+      "release_date": "2025-08-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1603780,
+      "title": "Raagu Kethu",
+      "release_date": "2025-08-08",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1556782,
+      "title": "Naalai Namadhe",
+      "release_date": "2025-08-08",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1528217,
+      "title": "Vaanaran",
+      "release_date": "2025-08-08",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1463344,
+      "title": "Red Flower",
+      "release_date": "2025-08-08",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1500030,
+      "title": "Wishes of the Blind birds",
+      "release_date": "2025-08-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1527473,
+      "title": "Paper Rowdy",
+      "release_date": "2025-08-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1524976,
+      "title": "Remember You Must Die",
+      "release_date": "2025-08-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1525013,
+      "title": "Killing the Travellers",
+      "release_date": "2025-08-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1571217,
+      "title": "BLACKMAIL",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1542905,
+      "title": "Mr. Zoo Keeper",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1517511,
+      "title": "Accused",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1515780,
+      "title": "Bhoghee",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1514325,
+      "title": "Muthal Pakkam",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1509804,
+      "title": "Usurae",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1508221,
+      "title": "Surrender",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1505291,
+      "title": "Blackmail",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1433545,
+      "title": "House Mates",
+      "release_date": "2025-08-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1022074,
+      "title": "Maareesan",
+      "release_date": "2025-07-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1434580,
+      "title": "Thalaivan Thalaivii",
+      "release_date": "2025-07-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1637884,
+      "title": "Drowning in the screen",
+      "release_date": "2025-07-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1593718,
+      "title": "Tapes Of Kannimedu",
+      "release_date": "2025-07-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1514063,
+      "title": "Jenma Natchathiram",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1512637,
+      "title": "Gevi",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1509350,
+      "title": "Yaadhum Ariyaan",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1495790,
+      "title": "Bun Butter Jam",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1480619,
+      "title": "Central",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 548437,
+      "title": "Trending",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 499371,
+      "title": "Titanic",
+      "release_date": "2025-07-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1569960,
+      "title": "Magudi",
+      "release_date": "2025-07-17",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1514832,
+      "title": "Edharkaga Marubadi",
+      "release_date": "2025-07-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1510433,
+      "title": "Desingu Raja 2",
+      "release_date": "2025-07-11",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1509983,
+      "title": "Mrs & Mr",
+      "release_date": "2025-07-11",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1508535,
+      "title": "Thotram",
+      "release_date": "2025-07-11",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1506415,
+      "title": "Maayakoothu",
+      "release_date": "2025-07-11",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1329271,
+      "title": "Oho Enthan Baby",
+      "release_date": "2025-07-11",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1511535,
+      "title": "UNAKKU PIDITHA ENNAI",
+      "release_date": "2025-07-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1518391,
+      "title": "Kingpin",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1507659,
+      "title": "MANAM",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1507067,
+      "title": "Akkenam",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1502587,
+      "title": "Iravu Paravai",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1499814,
+      "title": "Kuyili",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1498518,
+      "title": "Anugrahan",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1407016,
+      "title": "Parandhu Po",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1305322,
+      "title": "Phoenix",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1293849,
+      "title": "3BHK",
+      "release_date": "2025-07-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1504919,
+      "title": "Vaaname Ellai",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1503252,
+      "title": "Thiruk Kural",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1499525,
+      "title": "Good Day",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1433112,
+      "title": "Love Marriage",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1425641,
+      "title": "Maargan",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1305736,
+      "title": "The Verdict",
+      "release_date": "2025-06-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1483184,
+      "title": "Placebo",
+      "release_date": "2025-06-22",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1481505,
+      "title": "Unnai Kaanadha Naan",
+      "release_date": "2025-06-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1459770,
+      "title": "Rekkai Mulaithen",
+      "release_date": "2025-06-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1416501,
+      "title": "DNA",
+      "release_date": "2025-06-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1363072,
+      "title": "Chennai City Gangsters",
+      "release_date": "2025-06-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1500526,
+      "title": "Mirugasirisham: The Orion",
+      "release_date": "2025-06-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1498959,
+      "title": "Guts",
+      "release_date": "2025-06-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1498631,
+      "title": "Holocaust",
+      "release_date": "2025-06-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1494648,
+      "title": "ALT",
+      "release_date": "2025-06-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1484999,
+      "title": "Padai Thalaivan",
+      "release_date": "2025-06-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1448711,
+      "title": "Eternal Quill",
+      "release_date": "2025-06-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1493747,
+      "title": "Paramasivan Fathima",
+      "release_date": "2025-06-06",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1488301,
+      "title": "Madras Matinee",
+      "release_date": "2025-06-06",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1542106,
+      "title": "Sweet Beginning",
+      "release_date": "2025-06-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1114742,
+      "title": "Peranbum Perungobamum",
+      "release_date": "2025-06-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1045021,
+      "title": "Thug Life",
+      "release_date": "2025-06-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1481551,
+      "title": "Rajaputhiran",
+      "release_date": "2025-05-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1475502,
+      "title": "Manidhargal",
+      "release_date": "2025-05-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1468291,
+      "title": "Jinn-The Pet",
+      "release_date": "2025-05-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1483832,
+      "title": "KEY",
+      "release_date": "2025-05-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1484304,
+      "title": "School",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1483125,
+      "title": "Myyal",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1480633,
+      "title": "Aagakadavana",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1477248,
+      "title": "Vembu",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1468864,
+      "title": "Alert",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1132152,
+      "title": "Ace",
+      "release_date": "2025-05-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1470470,
+      "title": "Bleat!",
+      "release_date": "2025-05-19",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1646073,
+      "title": "Jadugar Ka Badla",
+      "release_date": "2025-05-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1477870,
+      "title": "Jora Kaiya Thattunga",
+      "release_date": "2025-05-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1421019,
+      "title": "Devil's Double Next Level",
+      "release_date": "2025-05-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1403039,
+      "title": "Maaman",
+      "release_date": "2025-05-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1309643,
+      "title": "Eleven",
+      "release_date": "2025-05-16",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1476437,
+      "title": "Suttaa Thale Enakku",
+      "release_date": "2025-05-15",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1477701,
+      "title": "Amaran",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1477007,
+      "title": "En Kadhale",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1475924,
+      "title": "Ambi",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1473098,
+      "title": "Yaman Kattalai",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1469236,
+      "title": "Nizharkudai",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1459683,
+      "title": "Vaathiyar Kuppam",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1062033,
+      "title": "Kaliyugam",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 985667,
+      "title": "Gajaana",
+      "release_date": "2025-05-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1509771,
+      "title": "Trigger",
+      "release_date": "2025-05-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1479615,
+      "title": "A Lone Floor",
+      "release_date": "2025-05-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1429902,
+      "title": "Beach",
+      "release_date": "2025-05-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1398359,
+      "title": "Tourist Family",
+      "release_date": "2025-04-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1265827,
+      "title": "Retro",
+      "release_date": "2025-04-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1485818,
+      "title": "Vallamai",
+      "release_date": "2025-04-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1468382,
+      "title": "Vanganna Vanakkanganna",
+      "release_date": "2025-04-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 619987,
+      "title": "Sumo",
+      "release_date": "2025-04-25",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1402008,
+      "title": "Paavakoothu",
+      "release_date": "2025-04-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1320752,
+      "title": "Gangers",
+      "release_date": "2025-04-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1465245,
+      "title": "Ten Hours",
+      "release_date": "2025-04-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1437648,
+      "title": "Enough",
+      "release_date": "2025-04-18",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1464359,
+      "title": "Seeing Red",
+      "release_date": "2025-04-15",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1463544,
+      "title": "Kesakambali",
+      "release_date": "2025-04-15",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1454391,
+      "title": "A Cool Summer Time...",
+      "release_date": "2025-04-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1259024,
+      "title": "Good Bad Ugly",
+      "release_date": "2025-04-09",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1474485,
+      "title": "Ka.Mu - Ka.Pi",
+      "release_date": "2025-04-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1462421,
+      "title": "A WISH TO REMEMBER",
+      "release_date": "2025-04-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1446897,
+      "title": "EMI",
+      "release_date": "2025-04-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1112417,
+      "title": "Test",
+      "release_date": "2025-04-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1005751,
+      "title": "Kettavanu Per Edutha Nallavanda",
+      "release_date": "2025-04-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1453003,
+      "title": "Kadaisi Dhum",
+      "release_date": "2025-04-02",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1457217,
+      "title": "nee vekkam kori",
+      "release_date": "2025-03-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1461114,
+      "title": "The Door",
+      "release_date": "2025-03-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1450177,
+      "title": "Tharaipadai",
+      "release_date": "2025-03-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1324252,
+      "title": "Vijay LL.B: The Advocate",
+      "release_date": "2025-03-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1198208,
+      "title": "Veera Dheera Sooran: Part 2",
+      "release_date": "2025-03-27",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1452611,
+      "title": "Crisis",
+      "release_date": "2025-03-22",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1542910,
+      "title": "Enai Sudum Pani",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1452088,
+      "title": "Pugai Padam",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1439367,
+      "title": "Asthram",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1415804,
+      "title": "Trauma",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1367085,
+      "title": "Pei Kottu",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1353182,
+      "title": "Thoppur",
+      "release_date": "2025-03-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1467256,
+      "title": "Through the window",
+      "release_date": "2025-03-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1078769,
+      "title": "Hero Friend-U",
+      "release_date": "2025-03-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1446369,
+      "title": "Leech",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1446308,
+      "title": "Varunan",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1444744,
+      "title": "Konjam Kadhal Konjam Modhal",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1443002,
+      "title": "Maadan Kodai Vizha",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1422471,
+      "title": "Dexter",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1416889,
+      "title": "Perusu",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1291321,
+      "title": "Sweetheart!",
+      "release_date": "2025-03-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1447848,
+      "title": "Addiction",
+      "release_date": "2025-03-13",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1485655,
+      "title": "Restart Restart",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1437273,
+      "title": "Manidham",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1434988,
+      "title": "Murmur",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1431271,
+      "title": "Niram Marum Ulagil",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1431043,
+      "title": "Gentlewoman",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1411454,
+      "title": "Yamakaathaghi",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1393676,
+      "title": "Kingston",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1123042,
+      "title": "Address",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 942955,
+      "title": "Aalambana",
+      "release_date": "2025-03-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1457187,
+      "title": "The First Puff",
+      "release_date": "2025-03-05",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1529276,
+      "title": "Kooran",
+      "release_date": "2025-02-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1474389,
+      "title": "Feast (Virundhu)",
+      "release_date": "2025-02-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1440249,
+      "title": "Butterfly",
+      "release_date": "2025-02-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1103756,
+      "title": "Aghathiyaa",
+      "release_date": "2025-02-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1062715,
+      "title": "Sabdham",
+      "release_date": "2025-02-28",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1273049,
+      "title": "Dragon",
+      "release_date": "2025-02-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1222049,
+      "title": "Nilavuku En Mel Ennadi Kobam",
+      "release_date": "2025-02-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1131038,
+      "title": "Edattam",
+      "release_date": "2025-02-21",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1440830,
+      "title": "Floated By",
+      "release_date": "2025-02-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1123851,
+      "title": "Simple Manusan",
+      "release_date": "2025-02-20",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1462710,
+      "title": "Badava",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1452794,
+      "title": "Baby & Baby",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1434866,
+      "title": "neram, kaalam; koodum",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1433161,
+      "title": "Baby & Baby",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1432145,
+      "title": "Dinasari",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1430470,
+      "title": "Otha Votu Muthaiya",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1430122,
+      "title": "Adhu Vaangina Ethu Elavasam",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1411540,
+      "title": "2K Love Story",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1398942,
+      "title": "Fire",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1123038,
+      "title": "Kanneera",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1031969,
+      "title": "Kaadhal Enbadhu Podhu Udamai",
+      "release_date": "2025-02-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1432647,
+      "title": "Un Aasai Mugam",
+      "release_date": "2025-02-07",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 949716,
+      "title": "Vidaamuyarchi",
+      "release_date": "2025-02-06",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1427163,
+      "title": "Ring Ring",
+      "release_date": "2025-01-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 553699,
+      "title": "Rajabheema",
+      "release_date": "2025-01-31",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1423185,
+      "title": "Tears of a Fish",
+      "release_date": "2025-01-30",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1427183,
+      "title": "Gavanam",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1423330,
+      "title": "Vallan",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1422297,
+      "title": "The Briefcase",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1421358,
+      "title": "Bottle Radha",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1402096,
+      "title": "Kuzhanthaigal Munnetra Kazhagam",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1357713,
+      "title": "Kudumbasthan",
+      "release_date": "2025-01-24",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1421487,
+      "title": "Tamil School Pasanga",
+      "release_date": "2025-01-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1421232,
+      "title": "Artist",
+      "release_date": "2025-01-23",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1420161,
+      "title": "Kutty Vaathiyar",
+      "release_date": "2025-01-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1310134,
+      "title": "Nesippaya",
+      "release_date": "2025-01-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1211999,
+      "title": "Kadhalikka Neramillai",
+      "release_date": "2025-01-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1137819,
+      "title": "Tharunam",
+      "release_date": "2025-01-14",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 280951,
+      "title": "Madha Gaja Raja",
+      "release_date": "2025-01-12",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1233332,
+      "title": "Madraskaaran",
+      "release_date": "2025-01-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 949380,
+      "title": "Vanangaan",
+      "release_date": "2025-01-10",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1413707,
+      "title": "Ajooba - The Unique",
+      "release_date": "2025-01-06",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1470598,
+      "title": "CrowShit",
+      "release_date": "2025-01-04",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1460274,
+      "title": "Shaktidasan",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1428855,
+      "title": "Sithariya Pakkangal",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1426671,
+      "title": "Bioscope",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1406227,
+      "title": "Lara",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1398980,
+      "title": "Xtreme",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1367098,
+      "title": "See Saw",
+      "release_date": "2025-01-03",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1426625,
+      "title": "Titanic Modhiya Iceberg Ivan",
+      "release_date": "2025-01-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1400781,
+      "title": "Panivizhum Iravu: The Onset",
+      "release_date": "2025-01-01",
+      "year": 2025
+    },
+    {
+      "tmdb_id": 1394958,
+      "title": "Vaagai",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1384671,
+      "title": "Alangu",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1276166,
+      "title": "Donut",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1199638,
+      "title": "Thiru.Manickam",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1008226,
+      "title": "Rajakili",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 942386,
+      "title": "The Smile Man",
+      "release_date": "2024-12-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1420415,
+      "title": "Letter",
+      "release_date": "2024-12-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1423421,
+      "title": "Bommai (An Island Story)",
+      "release_date": "2024-12-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1234471,
+      "title": "Navayuga Kannagi",
+      "release_date": "2024-12-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1565351,
+      "title": "Agapaduvaan",
+      "release_date": "2024-12-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1406296,
+      "title": "Thanks Einstein",
+      "release_date": "2024-12-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1020354,
+      "title": "Viduthalai: Part II",
+      "release_date": "2024-12-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1365528,
+      "title": "Tractor",
+      "release_date": "2024-12-17",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1403357,
+      "title": "Antha Naal",
+      "release_date": "2024-12-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1403351,
+      "title": "Then Chennai",
+      "release_date": "2024-12-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1398967,
+      "title": "Once Upon a Time in Madras",
+      "release_date": "2024-12-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1351991,
+      "title": "Miss You",
+      "release_date": "2024-12-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1114668,
+      "title": "Soodhu Kavvum 2: Nadum Naatu Makkalum...",
+      "release_date": "2024-12-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1423904,
+      "title": "The Mind",
+      "release_date": "2024-12-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1398084,
+      "title": "Salliyargal",
+      "release_date": "2024-12-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1393972,
+      "title": "Dappankuthu",
+      "release_date": "2024-12-06",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1383201,
+      "title": "Family Padam",
+      "release_date": "2024-12-06",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1363246,
+      "title": "Blood and Black",
+      "release_date": "2024-12-06",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1340950,
+      "title": "Blue",
+      "release_date": "2024-12-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1383162,
+      "title": "Karuppu Vellai",
+      "release_date": "2024-12-04",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1393301,
+      "title": "Thirumbipaar",
+      "release_date": "2024-11-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1393146,
+      "title": "Paraman",
+      "release_date": "2024-11-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1323267,
+      "title": "Sorgavaasal",
+      "release_date": "2024-11-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 582473,
+      "title": "Mayan",
+      "release_date": "2024-11-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1390705,
+      "title": "Jolly O Gymkhana",
+      "release_date": "2024-11-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1390306,
+      "title": "Lineman",
+      "release_date": "2024-11-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1387856,
+      "title": "Parari",
+      "release_date": "2024-11-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1386625,
+      "title": "Emakku Thozhil Romance",
+      "release_date": "2024-11-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 922360,
+      "title": "Nirangal Moondru",
+      "release_date": "2024-11-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1390963,
+      "title": "C4 Cinta",
+      "release_date": "2024-11-21",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1374761,
+      "title": "Black Gold",
+      "release_date": "2024-11-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1371265,
+      "title": "Veedu",
+      "release_date": "2024-11-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 622792,
+      "title": "Kanguva",
+      "release_date": "2024-11-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1381674,
+      "title": "Iravinil Aatam Par",
+      "release_date": "2024-11-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1382503,
+      "title": "Necklace",
+      "release_date": "2024-11-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1382504,
+      "title": "Padaiyappa Oonjal",
+      "release_date": "2024-10-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1376772,
+      "title": "The 16 Melodies",
+      "release_date": "2024-10-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1311073,
+      "title": "Bloody Beggar",
+      "release_date": "2024-10-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 927342,
+      "title": "Amaran",
+      "release_date": "2024-10-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1008633,
+      "title": "Brother",
+      "release_date": "2024-10-30",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1410452,
+      "title": "My Father & His Celluloid",
+      "release_date": "2024-10-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1410451,
+      "title": "Community Bond",
+      "release_date": "2024-10-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1410450,
+      "title": "HAIKU: A Neurodivergent Harmony",
+      "release_date": "2024-10-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1410447,
+      "title": "Agaligai Padalam",
+      "release_date": "2024-10-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1410444,
+      "title": "No Worry Chicken Curry",
+      "release_date": "2024-10-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1413739,
+      "title": "Scene Number 62",
+      "release_date": "2024-10-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1375460,
+      "title": "Happy Birthday Luci",
+      "release_date": "2024-10-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1375430,
+      "title": "Il Tha Ka Sai Aa",
+      "release_date": "2024-10-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1375396,
+      "title": "Deepavali Bonus",
+      "release_date": "2024-10-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1372815,
+      "title": "Chennaiyil Vaanam Megamootathudan Kaanapadum",
+      "release_date": "2024-10-18",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1372611,
+      "title": "Sir",
+      "release_date": "2024-10-18",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1372609,
+      "title": "Rocket Driver",
+      "release_date": "2024-10-18",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1370554,
+      "title": "Karuppu Petti",
+      "release_date": "2024-10-18",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1265979,
+      "title": "Aalan",
+      "release_date": "2024-10-18",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1467593,
+      "title": "NISAPTHAM",
+      "release_date": "2024-10-17",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1351604,
+      "title": "Yellow Fellow",
+      "release_date": "2024-10-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1509748,
+      "title": "Siru Ula Siru Mozhi",
+      "release_date": "2024-10-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1340332,
+      "title": "Black",
+      "release_date": "2024-10-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1093966,
+      "title": "Vettaiyan",
+      "release_date": "2024-10-10",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1362066,
+      "title": "Seeran",
+      "release_date": "2024-10-04",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1356638,
+      "title": "Aaragan",
+      "release_date": "2024-10-04",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1166041,
+      "title": "Blue Sunshine",
+      "release_date": "2024-10-04",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1498740,
+      "title": "Jillu",
+      "release_date": "2024-09-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1363022,
+      "title": "Project One",
+      "release_date": "2024-09-28",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1356882,
+      "title": "Dhil Raja",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1317591,
+      "title": "Petta Rap",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1185591,
+      "title": "Hitler",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1136423,
+      "title": "Meiyazhagan",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1113768,
+      "title": "Maatna Gaali",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 962085,
+      "title": "Sattam En Kaiyil",
+      "release_date": "2024-09-27",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1358920,
+      "title": "Dopamine @ 2.22",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1358787,
+      "title": "HMM – Hug Me More",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1358582,
+      "title": "Poultry Farm Chelladurai",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1357529,
+      "title": "Thozhar Cheguevara",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1355466,
+      "title": "Dhonima",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1318349,
+      "title": "Kadaisi Ulaga Por",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1097000,
+      "title": "Lubber Pandhu",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1060532,
+      "title": "Nandhan",
+      "release_date": "2024-09-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1386003,
+      "title": "Ezhudhaa Kadhaiyo",
+      "release_date": "2024-09-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1202268,
+      "title": "Quotation Gang Part 1",
+      "release_date": "2024-09-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1129608,
+      "title": "The Greatest of All Time",
+      "release_date": "2024-09-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1342270,
+      "title": "Lemons Are Not Sour",
+      "release_date": "2024-09-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1341521,
+      "title": "Virundhu",
+      "release_date": "2024-08-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1339691,
+      "title": "Katra Thaliya",
+      "release_date": "2024-08-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1338207,
+      "title": "Saala",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1335741,
+      "title": "Adharma Kadhaigal",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1329956,
+      "title": "Pogumidam Vegu Thooramillai",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1329084,
+      "title": "Narkarappor",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1319597,
+      "title": "Amigo",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1098332,
+      "title": "The Adamant Girl",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1051426,
+      "title": "Vaazhai",
+      "release_date": "2024-08-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1480362,
+      "title": "The Lefthand Illness",
+      "release_date": "2024-08-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1539028,
+      "title": "Strangers",
+      "release_date": "2024-08-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1132154,
+      "title": "Raghu Thatha",
+      "release_date": "2024-08-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 979250,
+      "title": "Demonte Colony 2",
+      "release_date": "2024-08-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 910784,
+      "title": "Thangalaan",
+      "release_date": "2024-08-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1327958,
+      "title": "Kaalam Darrr - Short Film",
+      "release_date": "2024-08-10",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1327015,
+      "title": "Kavundampalayam",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1326926,
+      "title": "Light House",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1326711,
+      "title": "P2",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1324888,
+      "title": "Veerayi Makkal",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1321874,
+      "title": "Minmini",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1321835,
+      "title": "Park",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 904704,
+      "title": "Andhagan",
+      "release_date": "2024-08-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1495363,
+      "title": "Point to Pointless",
+      "release_date": "2024-08-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1321821,
+      "title": "Pechi",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1316912,
+      "title": "Boat",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1316911,
+      "title": "Jama",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1190904,
+      "title": "Nanban Oruvan Vantha Piragu",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 935526,
+      "title": "Kanmani Paappa",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 926027,
+      "title": "Vasco Da Gama",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 896954,
+      "title": "Mazhai Pidikatha Manithan",
+      "release_date": "2024-08-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1320909,
+      "title": "Pitha 23:23",
+      "release_date": "2024-07-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1136418,
+      "title": "Raayan",
+      "release_date": "2024-07-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1142657,
+      "title": "Crimes and Diamonds",
+      "release_date": "2024-07-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1319148,
+      "title": "Crime Reel",
+      "release_date": "2024-07-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 956103,
+      "title": "Maya Puthagam",
+      "release_date": "2024-07-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1313462,
+      "title": "Teenz",
+      "release_date": "2024-07-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 552398,
+      "title": "Indian 2: Zero Tolerance",
+      "release_date": "2024-07-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1320764,
+      "title": "Unmai Kadhai",
+      "release_date": "2024-07-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1311392,
+      "title": "Naanum Oru Azhagi",
+      "release_date": "2024-07-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1311247,
+      "title": "7/G",
+      "release_date": "2024-07-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1307764,
+      "title": "Emagadhagan",
+      "release_date": "2024-07-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1308200,
+      "title": "Bayamariya Brammai",
+      "release_date": "2024-06-21",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1307942,
+      "title": "Laandhar",
+      "release_date": "2024-06-21",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1305576,
+      "title": "Rail",
+      "release_date": "2024-06-21",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 418283,
+      "title": "Rail",
+      "release_date": "2024-06-21",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1256581,
+      "title": "Singappenney",
+      "release_date": "2024-06-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1305285,
+      "title": "Time",
+      "release_date": "2024-06-16",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1118224,
+      "title": "Maharaja",
+      "release_date": "2024-06-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 613662,
+      "title": "Pithala Maathi",
+      "release_date": "2024-06-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1299467,
+      "title": "Journey",
+      "release_date": "2024-06-13",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1301290,
+      "title": "Anjaamai",
+      "release_date": "2024-06-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1292141,
+      "title": "Dandupalayam",
+      "release_date": "2024-06-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1220568,
+      "title": "Ini Oru Kadhal Seivom",
+      "release_date": "2024-06-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1031979,
+      "title": "Weapon",
+      "release_date": "2024-06-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 975223,
+      "title": "Haraa",
+      "release_date": "2024-06-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1299375,
+      "title": "OFF-SCREEN",
+      "release_date": "2024-06-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1298116,
+      "title": "Hit List",
+      "release_date": "2024-05-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1296170,
+      "title": "The Akaali",
+      "release_date": "2024-05-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1295246,
+      "title": "Bujji at Anupatti",
+      "release_date": "2024-05-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1186312,
+      "title": "Garudan",
+      "release_date": "2024-05-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1285929,
+      "title": "Amma's Pride",
+      "release_date": "2024-05-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1328687,
+      "title": "Konjam Pesinaal Yenna",
+      "release_date": "2024-05-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1283474,
+      "title": "Pagalariyaan",
+      "release_date": "2024-05-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1073264,
+      "title": "PT Sir",
+      "release_date": "2024-05-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 950260,
+      "title": "Kurangu Pedal",
+      "release_date": "2024-05-24",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1026381,
+      "title": "Saamaniyan",
+      "release_date": "2024-05-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1443967,
+      "title": "CD4 LOVE",
+      "release_date": "2024-05-17",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1286651,
+      "title": "Padikkada Pakkangal",
+      "release_date": "2024-05-17",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1283338,
+      "title": "Election",
+      "release_date": "2024-05-17",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1278884,
+      "title": "Inga Naan Thaan Kingu",
+      "release_date": "2024-05-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1276338,
+      "title": "Star",
+      "release_date": "2024-05-10",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1270345,
+      "title": "Oozhi",
+      "release_date": "2024-05-10",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1226759,
+      "title": "Rasavathi",
+      "release_date": "2024-05-10",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1288187,
+      "title": "Kayalin Osai",
+      "release_date": "2024-05-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1446089,
+      "title": "Rajinikanth",
+      "release_date": "2024-05-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1275781,
+      "title": "The Proof",
+      "release_date": "2024-05-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1091003,
+      "title": "Akkaran",
+      "release_date": "2024-05-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1281459,
+      "title": "Oru Nodi",
+      "release_date": "2024-04-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1279019,
+      "title": "Ingu Mirugangal VaazhumIdam",
+      "release_date": "2024-04-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1171532,
+      "title": "Rathnam",
+      "release_date": "2024-04-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1274124,
+      "title": "Rooban",
+      "release_date": "2024-04-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1273336,
+      "title": "Siragan",
+      "release_date": "2024-04-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1270750,
+      "title": "Never Escape",
+      "release_date": "2024-04-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1156292,
+      "title": "Finder",
+      "release_date": "2024-04-20",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1277572,
+      "title": "Vallavan Vaguthathada",
+      "release_date": "2024-04-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1277333,
+      "title": "Travel La Oru Kadhal",
+      "release_date": "2024-04-19",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1265508,
+      "title": "Pon Ondru Kanden",
+      "release_date": "2024-04-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1275125,
+      "title": "Kannethire",
+      "release_date": "2024-04-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1269642,
+      "title": "Vaa Pagandaya",
+      "release_date": "2024-04-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1245285,
+      "title": "Enimey Nangadha Head Lines",
+      "release_date": "2024-04-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1238258,
+      "title": "Romeo",
+      "release_date": "2024-04-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1140905,
+      "title": "Aranmanai 4",
+      "release_date": "2024-04-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1122356,
+      "title": "DeAr",
+      "release_date": "2024-04-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1269773,
+      "title": "Oru Thavaru Seidhal",
+      "release_date": "2024-04-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1267903,
+      "title": "Double Tuckerr",
+      "release_date": "2024-04-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1267253,
+      "title": "Aalakaalam",
+      "release_date": "2024-04-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1264048,
+      "title": "Iravin kangal",
+      "release_date": "2024-04-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 927917,
+      "title": "White Rose",
+      "release_date": "2024-04-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1150401,
+      "title": "Kalvan",
+      "release_date": "2024-04-04",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1266959,
+      "title": "The Boys",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1266734,
+      "title": "Hot Spot",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1258940,
+      "title": "Veppam Kulir Mazhai",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1257416,
+      "title": "Idi Minnal Kadhal",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1226263,
+      "title": "Netru Indha Neram",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1223603,
+      "title": "Eppura",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1054770,
+      "title": "Boomer Uncle",
+      "release_date": "2024-03-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1196856,
+      "title": "Rebel",
+      "release_date": "2024-03-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1409767,
+      "title": "Arjun",
+      "release_date": "2024-03-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1259902,
+      "title": "Yaavarum Vallavare",
+      "release_date": "2024-03-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1258117,
+      "title": "Amigo Garage",
+      "release_date": "2024-03-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 985333,
+      "title": "Kaaduvetty",
+      "release_date": "2024-03-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1436911,
+      "title": "Robber",
+      "release_date": "2024-03-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1079113,
+      "title": "Dhanussh",
+      "release_date": "2024-03-14",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1330530,
+      "title": "Arimapatti Sakthivel",
+      "release_date": "2024-03-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1257293,
+      "title": "Unarvugal Thodarkadhai",
+      "release_date": "2024-03-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1247584,
+      "title": "Nalla Perai Vaanga Vendum Pillaigale",
+      "release_date": "2024-03-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1040137,
+      "title": "Guardian",
+      "release_date": "2024-03-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 980517,
+      "title": "J.Baby",
+      "release_date": "2024-03-08",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1255578,
+      "title": "Oru Kadha Sollattaa Sir",
+      "release_date": "2024-03-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1443674,
+      "title": "Por",
+      "release_date": "2024-03-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1254149,
+      "title": "Athomugam",
+      "release_date": "2024-03-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1248209,
+      "title": "Sathamindri Mutham Tha",
+      "release_date": "2024-03-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1225852,
+      "title": "Mangai",
+      "release_date": "2024-03-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 652784,
+      "title": "Joshua Imai Pol Kaakha",
+      "release_date": "2024-03-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1149367,
+      "title": "Agrinai",
+      "release_date": "2024-02-29",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1376525,
+      "title": "Glassmates",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1248938,
+      "title": "Byri: Pagam 1",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1246021,
+      "title": "Ranam Aram Thavarel",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1243237,
+      "title": "Birthmark",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1119067,
+      "title": "Vithaikkaaran",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1055753,
+      "title": "Pambattam",
+      "release_date": "2024-02-23",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1515599,
+      "title": "Avantaa - Event Promotion film",
+      "release_date": "2024-02-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1245864,
+      "title": "Operation Laila",
+      "release_date": "2024-02-22",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1244928,
+      "title": "Ettum Varai Ettu",
+      "release_date": "2024-02-16",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1244540,
+      "title": "Kazhu Maram",
+      "release_date": "2024-02-16",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1019232,
+      "title": "Siren",
+      "release_date": "2024-02-16",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1079147,
+      "title": "Curry Mee",
+      "release_date": "2024-02-15",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1241204,
+      "title": "Ippadiku Kadhal",
+      "release_date": "2024-02-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1239576,
+      "title": "E-Mail",
+      "release_date": "2024-02-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1044552,
+      "title": "Lal Salaam",
+      "release_date": "2024-02-09",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1219158,
+      "title": "Lover",
+      "release_date": "2024-02-07",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1240973,
+      "title": "The Feast",
+      "release_date": "2024-02-03",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1237579,
+      "title": "Chiclets",
+      "release_date": "2024-02-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1229444,
+      "title": "Marakkuma Nenjam",
+      "release_date": "2024-02-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1167205,
+      "title": "Devil",
+      "release_date": "2024-02-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1115680,
+      "title": "Vadakkupatti Ramasamy",
+      "release_date": "2024-02-02",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1238522,
+      "title": "Birthday Bumps",
+      "release_date": "2024-01-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1063245,
+      "title": "Kathir",
+      "release_date": "2024-01-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 954445,
+      "title": "Yezhu Kadal Yezhu Malai",
+      "release_date": "2024-01-31",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1422285,
+      "title": "Malargal Kaeten",
+      "release_date": "2024-01-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1233095,
+      "title": "Local Sarakku",
+      "release_date": "2024-01-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1201524,
+      "title": "Niyathi",
+      "release_date": "2024-01-26",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1230097,
+      "title": "Blue Star",
+      "release_date": "2024-01-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1191434,
+      "title": "Rambai Sonna Kadhai",
+      "release_date": "2024-01-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1051379,
+      "title": "Thookudurai",
+      "release_date": "2024-01-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1046924,
+      "title": "Singapore Saloon",
+      "release_date": "2024-01-25",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1281705,
+      "title": "Bulb",
+      "release_date": "2024-01-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1225458,
+      "title": "Sevappi",
+      "release_date": "2024-01-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1043311,
+      "title": "Mission: Chapter 1",
+      "release_date": "2024-01-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 755388,
+      "title": "Ayalaan",
+      "release_date": "2024-01-12",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 962074,
+      "title": "Captain Miller",
+      "release_date": "2024-01-11",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1248919,
+      "title": "Kaazh",
+      "release_date": "2024-01-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1225102,
+      "title": "Kumbaari",
+      "release_date": "2024-01-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1210047,
+      "title": "Aranam",
+      "release_date": "2024-01-05",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1448133,
+      "title": "Love's Green Patch",
+      "release_date": "2024-01-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1373984,
+      "title": "Ghost Story 2",
+      "release_date": "2024-01-01",
+      "year": 2024
+    },
+    {
+      "tmdb_id": 1297527,
+      "title": "Living Faith",
+      "release_date": "2024-01-01",
+      "year": 2024
     }
   ],
-  "totalMoviesFound": 69,
+  "totalMoviesFound": 623,
   "failedYears": [],
   "processedTmdbIds": [
     1324688,
@@ -441,7 +3765,6 @@
     1576223,
     1542352,
     1646090,
-    1642665,
     1617089,
     1561687,
     1645748,
@@ -488,10 +3811,429 @@
     1606938,
     1604186,
     1603231,
-    1600735
+    1600735,
+    1554304,
+    1487142,
+    1413333,
+    1564672,
+    1310458,
+    985354,
+    1597781,
+    1595744,
+    1592043,
+    1594436,
+    1593648,
+    1593062,
+    1592772,
+    1591730,
+    1586614,
+    1561955,
+    1369654,
+    1123859,
+    1620037,
+    1589864,
+    1638930,
+    1602372,
+    1586508,
+    1565650,
+    1074048,
+    1555298,
+    1608032,
+    1595756,
+    1584857,
+    1578379,
+    1566666,
+    1314278,
+    946040,
+    1567963,
+    1581336,
+    1566713,
+    1544976,
+    1544547,
+    1541503,
+    1377961,
+    1404000,
+    1250508,
+    1523371,
+    1575832,
+    1565129,
+    1562299,
+    1551992,
+    1531058,
+    1489510,
+    1607699,
+    1562718,
+    1435139,
+    1318308,
+    1576690,
+    1565017,
+    1557086,
+    1570608,
+    1565132,
+    1562008,
+    1560204,
+    1321108,
+    1257957,
+    985379,
+    1559092,
+    1558252,
+    1553472,
+    1433133,
+    1551146,
+    1561399,
+    1323880,
+    1598608,
+    1643767,
+    1551138,
+    1548586,
+    1425630,
+    1299039,
+    1091043,
+    1538926,
+    1501962,
+    1549411,
+    1542842,
+    1542183,
+    1540782,
+    1540478,
+    1534309,
+    1090991,
+    1543249,
+    1506282,
+    1403839,
+    1297181,
+    1553052,
+    1538920,
+    1536654,
+    1534185,
+    1530657,
+    1478844,
+    1569004,
+    1527352,
+    1225968,
+    1530918,
+    1153399,
+    1603780,
+    1556782,
+    1528217,
+    1463344,
+    1500030,
+    1527473,
+    1524976,
+    1525013,
+    1571217,
+    1542905,
+    1517511,
+    1515780,
+    1514325,
+    1509804,
+    1508221,
+    1505291,
+    1433545,
+    1022074,
+    1434580,
+    1637884,
+    1593718,
+    1514063,
+    1512637,
+    1509350,
+    1495790,
+    1480619,
+    548437,
+    499371,
+    1569960,
+    1514832,
+    1510433,
+    1509983,
+    1508535,
+    1506415,
+    1329271,
+    1511535,
+    1518391,
+    1502587,
+    1499814,
+    1498518,
+    1407016,
+    1305322,
+    1293849,
+    1504919,
+    1503252,
+    1499525,
+    1433112,
+    1425641,
+    1305736,
+    1483184,
+    1481505,
+    1459770,
+    1416501,
+    1498959,
+    1498631,
+    1494648,
+    1484999,
+    1448711,
+    1493747,
+    1542106,
+    1114742,
+    1045021,
+    1481551,
+    1475502,
+    1468291,
+    1484304,
+    1483125,
+    1480633,
+    1477248,
+    1468864,
+    1132152,
+    1470470,
+    1646073,
+    1477870,
+    1421019,
+    1403039,
+    1309643,
+    1476437,
+    1477701,
+    1477007,
+    1475924,
+    1473098,
+    1469236,
+    1459683,
+    1062033,
+    985667,
+    1509771,
+    1479615,
+    1429902,
+    1265827,
+    1485818,
+    1468382,
+    619987,
+    1402008,
+    1320752,
+    1465245,
+    1437648,
+    1464359,
+    1463544,
+    1454391,
+    1259024,
+    1474485,
+    1462421,
+    1446897,
+    1112417,
+    1005751,
+    1453003,
+    1457217,
+    1461114,
+    1450177,
+    1324252,
+    1198208,
+    1452611,
+    1542910,
+    1452088,
+    1439367,
+    1415804,
+    1367085,
+    1353182,
+    1467256,
+    1078769,
+    1446369,
+    1446308,
+    1444744,
+    1443002,
+    1422471,
+    1416889,
+    1291321,
+    1447848,
+    1485655,
+    1437273,
+    1434988,
+    1431271,
+    1431043,
+    1411454,
+    1393676,
+    1123042,
+    942955,
+    1457187,
+    1529276,
+    1474389,
+    1440249,
+    1103756,
+    1062715,
+    1273049,
+    1222049,
+    1131038,
+    1440830,
+    1123851,
+    1462710,
+    1452794,
+    1434866,
+    1433161,
+    1432145,
+    1430470,
+    1430122,
+    1411540,
+    1398942,
+    1123038,
+    1031969,
+    1432647,
+    949716,
+    1427163,
+    553699,
+    1423185,
+    1423330,
+    1422297,
+    1421358,
+    1402096,
+    1357713,
+    1421487,
+    1421232,
+    1420161,
+    1310134,
+    1211999,
+    1137819,
+    280951,
+    1233332,
+    949380,
+    1413707,
+    1470598,
+    1460274,
+    1428855,
+    1426671,
+    1406227,
+    1398980,
+    1367098,
+    1426625,
+    1400781,
+    1394958,
+    1384671,
+    1276166,
+    1199638,
+    1008226,
+    942386,
+    1420415,
+    1423421,
+    1234471,
+    1565351,
+    1406296,
+    1020354,
+    1365528,
+    1403357,
+    1403351,
+    1398967,
+    1351991,
+    1114668,
+    1423904,
+    1398084,
+    1393972,
+    1383201,
+    1363246,
+    1340950,
+    1383162,
+    1393301,
+    1393146,
+    1323267,
+    582473,
+    1390705,
+    1390306,
+    1387856,
+    1386625,
+    922360,
+    1390963,
+    1374761,
+    1371265,
+    622792,
+    1381674,
+    1382503,
+    1382504,
+    1376772,
+    1311073,
+    927342,
+    1008633,
+    1410452,
+    1410451,
+    1410450,
+    1410447,
+    1410444,
+    1413739,
+    1375460,
+    1375430,
+    1375396,
+    1372815,
+    1372611,
+    1372609,
+    1370554,
+    1265979,
+    1467593,
+    1351604,
+    1509748,
+    1340332,
+    1356638,
+    1166041,
+    1498740,
+    1363022,
+    1356882,
+    1317591,
+    1185591,
+    1136423,
+    1113768,
+    962085,
+    1358920,
+    1358787,
+    1358582,
+    1357529,
+    1355466,
+    1318349,
+    1097000,
+    1060532,
+    1386003,
+    1202268,
+    1129608,
+    1342270,
+    1341521,
+    1339691,
+    1338207,
+    1335741,
+    1329956,
+    1329084,
+    1319597,
+    1098332,
+    1051426,
+    1480362,
+    1539028,
+    1132154,
+    979250,
+    910784,
+    1327958,
+    1327015,
+    1326926,
+    1326711,
+    1324888,
+    1321874,
+    1321835,
+    904704,
+    1495363,
+    1321821,
+    1316911,
+    1190904,
+    935526,
+    926027,
+    896954,
+    1320909,
+    1136418,
+    1142657,
+    1319148,
+    956103,
+    1313462,
+    552398,
+    1320764,
+    1311392,
+    1311247,
+    1307764,
+    1308200,
+    1307942,
+    1305576,
+    418283
   ],
   "phase2Progress": {
-    "processed": 51,
-    "total": 69
+    "processed": 501,
+    "total": 623
   }
 }
