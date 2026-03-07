@@ -29,19 +29,32 @@ const Navbar = () => {
                     </span>
                 </Link>
 
-                {/* Desktop Search */}
-                <form onSubmit={handleSearch} className="hidden md:flex flex-grow max-w-md mx-8 relative">
-                    <input
-                        type="text"
-                        placeholder="Search movies or actors..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-slate-900/50 border border-slate-700 rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                    />
-                    <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors">
-                        <Search className="w-4 h-4" />
-                    </button>
-                </form>
+                {/* Desktop Menu */}
+                <div className="hidden md:flex flex-grow max-w-2xl mx-8 items-center gap-6">
+                    {/* Search */}
+                    <form onSubmit={handleSearch} className="flex-grow relative">
+                        <input
+                            type="text"
+                            placeholder="Search movies or actors..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full bg-slate-900/50 border border-slate-700 rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
+                        />
+                        <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors">
+                            <Search className="w-4 h-4" />
+                        </button>
+                    </form>
+
+                    {/* Meme Editor Link */}
+                    <Link
+                        to="/meme-editor"
+                        className="shrink-0 text-sm font-medium transition-colors hover:opacity-80"
+                    >
+                        <span className="px-3 py-1.5 bg-indigo-600 text-white rounded-lg shadow-lg shadow-indigo-600/20">
+                            Meme Editor
+                        </span>
+                    </Link>
+                </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
@@ -72,6 +85,7 @@ const Navbar = () => {
                     </form>
                     <div className="flex flex-col gap-2">
                         <Link to="/" className="p-2 hover:bg-slate-800 rounded-lg transition-colors" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                        <Link to="/meme-editor" className="p-2 hover:bg-slate-800 rounded-lg transition-colors text-indigo-400 font-medium" onClick={() => setIsMenuOpen(false)}>Meme Editor</Link>
                     </div>
                 </div>
             </div>
