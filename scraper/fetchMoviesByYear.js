@@ -12,8 +12,8 @@ const CHECKPOINT_FILE = path.join(__dirname, "checkpoint.json");
 const BASE_URL = "https://api.themoviedb.org/3";
 
 // Year range: 2024-03-31 back to 2020-01-01
-const START_DATE = "2016-01-01";
-const END_DATE = "2019-12-31";
+const START_DATE = "2000-01-01";
+const END_DATE = "2004-12-31";
 const DELAY_MS = 300;
 
 // ── Helpers ──────────────────────────────────────────────────
