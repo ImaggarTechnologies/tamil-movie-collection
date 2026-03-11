@@ -67,8 +67,8 @@ const SearchPage = () => {
                     <button
                         onClick={() => setActiveTab('movies')}
                         className={`px-8 py-2 rounded-lg text-sm font-bold transition-all ${activeTab === 'movies'
-                                ? 'bg-indigo-600 text-white shadow-lg'
-                                : 'text-slate-400 hover:text-white'
+                            ? 'bg-indigo-600 text-white shadow-lg'
+                            : 'text-slate-400 hover:text-white'
                             }`}
                     >
                         Movies ({movieResults.length})
@@ -76,8 +76,8 @@ const SearchPage = () => {
                     <button
                         onClick={() => setActiveTab('persons')}
                         className={`px-8 py-2 rounded-lg text-sm font-bold transition-all ${activeTab === 'persons'
-                                ? 'bg-indigo-600 text-white shadow-lg'
-                                : 'text-slate-400 hover:text-white'
+                            ? 'bg-indigo-600 text-white shadow-lg'
+                            : 'text-slate-400 hover:text-white'
                             }`}
                     >
                         People ({personResults.length})

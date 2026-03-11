@@ -2,8 +2,12 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import * as fabric from 'fabric';
 import {
     Upload, Type, Download, Trash2, RotateCcw, Image as ImageIcon,
-    Smile, Palette, Undo2, Redo2
+    Smile, Palette, Undo2, Redo2, Maximize2, Layers, MousePointer2,
+    Type as TypeIcon, Hash, ChevronDown, Save,
+    Share2, ZoomIn, ZoomOut, Expand, HelpCircle, Settings2,
+    History, Layout, Sliders, Menu, X
 } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 const FONTS = [
     'Impact, Arial Black, sans-serif',
@@ -20,16 +24,20 @@ const EMOJIS = [
     '😂', '🔥', '💀', '😱', '🤩', '🤔', '💯', '❤️',
     '😎', '🙄', '🎉', '✨', '💩', '🤡', '👽', '👾',
     '👀', '👅', '🧠', '💪', '🤙', '🤝', '🙌', '🙏',
-    '🚀', '🛸', '🌈', '☀️', '🌕', '🍀', '🍕', '🍻',
-    '🎮', '🎸', '📱', '💰', '💎', '🧊', '⚡'
+    '🚀', '🛸', '🌈', '☀️', '🌕', '🍀', '🍕', '🍻'
 ];
 
 const MemeEditor = () => {
     const canvasRef = useRef(null);
     const fabricCanvasRef = useRef(null);
+    const containerRef = useRef(null);
+    const workspaceRef = useRef(null);
     const [selectedObject, setSelectedObject] = useState(null);
     const [textColor, setTextColor] = useState('#ffffff');
     const [activeFont, setActiveFont] = useState(FONTS[0]);
+    const [zoom, setZoom] = useState(1);
+    const [activeTool, setActiveTool] = useState('select'); // 'select', 'text', 'image', 'emoji'
+    const [projectName, setProjectName] = useState('Untitled_Project_01');
 
     // History management
     const historyStack = useRef([]);
@@ -83,10 +91,12 @@ const MemeEditor = () => {
     }, []);
 
     useEffect(() => {
+        const workspace = workspaceRef.current;
         const canvas = new fabric.Canvas(canvasRef.current, {
             width: 800,
             height: 600,
             backgroundColor: '#0f172a',
+            preserveObjectStacking: true,
         });
 
         fabricCanvasRef.current = canvas;
@@ -103,12 +113,9 @@ const MemeEditor = () => {
 
         const handleKeyDown = (e) => {
             const active = canvas.getActiveObject();
-            const isEditing = active && active.isEditing;
-            if (isEditing) return;
+            if (active && active.isEditing) return;
 
-            if (e.key === 'Delete' || e.key === 'Backspace') {
-                deleteSelected();
-            }
+            if (e.key === 'Delete' || e.key === 'Backspace') deleteSelected();
             if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
                 e.preventDefault();
                 undo();
@@ -146,6 +153,7 @@ const MemeEditor = () => {
                 scaleY: scale,
                 left: (fabricCanvasRef.current.width - img.width * scale) / 2,
                 top: (fabricCanvasRef.current.height - img.height * scale) / 2,
+                padding: 0,
             });
 
             fabricCanvasRef.current.add(img);
@@ -156,17 +164,21 @@ const MemeEditor = () => {
     };
 
     const addText = () => {
-        const text = new fabric.Textbox('Double click to edit', {
-            left: 100,
-            top: 100,
+        const text = new fabric.Textbox('NEW TEXT', {
+            left: 250,
+            top: 250,
             width: 300,
-            fontSize: 40,
+            fontSize: 48,
             fill: textColor,
             fontFamily: activeFont,
             textAlign: 'center',
             stroke: '#000000',
             strokeWidth: 2,
             fontWeight: 'bold',
+            cornerStyle: 'circle',
+            cornerColor: '#6366f1',
+            transparentCorners: false,
+            padding: 0,
         });
         fabricCanvasRef.current.add(text);
         fabricCanvasRef.current.setActiveObject(text);
@@ -174,39 +186,20 @@ const MemeEditor = () => {
 
     const addEmoji = (emoji) => {
         const text = new fabric.Textbox(emoji, {
-            left: 150,
-            top: 150,
+            left: 350,
+            top: 250,
             width: 100,
-            fontSize: 80,
+            fontSize: 100,
+            padding: 0,
         });
         fabricCanvasRef.current.add(text);
         fabricCanvasRef.current.setActiveObject(text);
     };
 
-    const clearCanvas = () => {
-        fabricCanvasRef.current.clear();
-        fabricCanvasRef.current.backgroundColor = '#0f172a';
-        fabricCanvasRef.current.renderAll();
-        saveHistory();
-    };
-
-    const downloadMeme = () => {
-        const dataURL = fabricCanvasRef.current.toDataURL({
-            format: 'png',
-            quality: 1,
-        });
-        const link = document.createElement('a');
-        link.download = 'meme-openmemes.png';
-        link.href = dataURL;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
     const changeColor = (color) => {
         setTextColor(color);
         const active = fabricCanvasRef.current.getActiveObject();
-        if (active && (active.type === 'textbox' || active.type === 'i-text')) {
+        if (active && active.set) {
             active.set('fill', color);
             fabricCanvasRef.current.renderAll();
             saveHistory();
@@ -216,154 +209,232 @@ const MemeEditor = () => {
     const changeFont = (font) => {
         setActiveFont(font);
         const active = fabricCanvasRef.current.getActiveObject();
-        if (active && (active.type === 'textbox' || active.type === 'i-text')) {
+        if (active && active.set) {
             active.set('fontFamily', font);
             fabricCanvasRef.current.renderAll();
             saveHistory();
         }
     };
 
+    const downloadMeme = () => {
+        const dataURL = fabricCanvasRef.current.toDataURL({ format: 'png', quality: 1 });
+        const link = document.createElement('a');
+        const fileName = projectName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || 'meme-export';
+        link.download = `${fileName}.png`;
+        link.href = dataURL;
+        link.click();
+    };
+
     return (
-        <div className="flex flex-col lg:flex-row gap-8 py-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            {/* Sidebar Controls */}
-            <div className="w-full lg:w-80 space-y-6">
-                <div className="glass p-6 rounded-2xl border border-slate-800 space-y-6">
-                    <div className="flex justify-between items-center">
-                        <div>
-                            <h2 className="text-xl font-bold text-white mb-1">Editor Tools</h2>
-                            <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold flex items-center gap-1.5 grayscale opacity-70">
-                                🎨 Meme Studio
-                            </p>
-                        </div>
-                        <div className="flex gap-1">
-                            <button
-                                onClick={undo}
-                                title="Undo (Ctrl+Z)"
-                                className="p-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors border border-slate-700 disabled:opacity-30"
-                            >
-                                <Undo2 className="w-4 h-4" />
-                            </button>
-                            <button
-                                onClick={redo}
-                                title="Redo (Ctrl+Y)"
-                                className="p-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors border border-slate-700 disabled:opacity-30"
-                            >
-                                <Redo2 className="w-4 h-4" />
-                            </button>
-                        </div>
+        <div className="max-w-[1440px] w-[calc(100%-32px)] mx-auto flex h-[calc(100vh-64px-16px)] mt-4 overflow-hidden bg-[#0a0a0c] text-slate-300 font-sans selection:bg-indigo-500/30 rounded-t-xl border-x border-t border-white/5">
+            {/* 1. LEFT TOOLBAR: Narrow & Technical */}
+            <div className="w-[60px] flex flex-col items-center py-4 bg-[#141416] border-r border-white/5 space-y-4 shrink-0">
+                <ToolButton active={activeTool === 'select'} onClick={() => setActiveTool('select')} icon={<MousePointer2 className="w-5 h-5" />} label="Select" />
+                <div className="w-8 h-px bg-white/5 my-1" />
+                <ToolButton active={activeTool === 'text'} onClick={() => { setActiveTool('text'); addText(); }} icon={<TypeIcon className="w-5 h-5" />} label="Text" />
+
+                <label className="cursor-pointer group relative">
+                    <ToolButton active={activeTool === 'image'} onClick={() => { }} icon={<ImageIcon className="w-5 h-5" />} label="Media" asDiv />
+                    <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
+                </label>
+
+                <ToolButton active={activeTool === 'emoji'} onClick={() => setActiveTool('emoji')} icon={<Smile className="w-5 h-5" />} label="Emoji" />
+
+                <div className="flex-grow" />
+
+                <ToolButton onClick={undo} icon={<Undo2 className="w-5 h-5" />} label="Undo" />
+                <ToolButton onClick={redo} icon={<Redo2 className="w-5 h-5" />} label="Redo" />
+                <ToolButton icon={<HelpCircle className="w-5 h-5" />} label="Help" />
+            </div>
+
+            {/* 2. MAIN WORKSPACE: Massive Center */}
+            <div className="flex-grow flex flex-col min-w-0 bg-[#0a0a0c]">
+                {/* Workspace Header */}
+                <div className="h-12 border-b border-white/5 flex items-center justify-between px-6 bg-[#141416]/50 backdrop-blur-md">
+                    <div className="flex items-center gap-4">
+                        <span className="text-xs font-bold tracking-[0.2em] text-indigo-400 uppercase">Open Memes Editor</span>
+                        <div className="h-4 w-px bg-white/10" />
+                        <input
+                            type="text"
+                            value={projectName}
+                            onChange={(e) => setProjectName(e.target.value)}
+                            className="bg-transparent border-none text-[11px] font-mono text-slate-400 uppercase focus:outline-none focus:text-white transition-colors w-48 hover:bg-white/5 px-2 py-0.5 rounded cursor-edit"
+                            placeholder="PROJECT_NAME"
+                        />
                     </div>
-
-                    <div className="space-y-4">
-                        <div className="grid grid-cols-1 gap-3">
-                            <label className="flex items-center justify-center gap-3 w-full p-3 rounded-xl cursor-pointer transition-all shadow-lg group bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-600/20">
-                                <Upload className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-medium">Upload Image</span>
-                                <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" />
-                            </label>
-
-                            <button
-                                onClick={addText}
-                                className="flex items-center justify-center gap-3 p-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl transition-all border border-slate-700 group"
-                            >
-                                <Type className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span className="font-medium text-sm">Add Text</span>
-                            </button>
-                        </div>
-
-                        <div className="space-y-3 pt-2">
-                            <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider block flex items-center gap-2">
-                                <Palette className="w-3 h-3" /> Color & Style
-                            </label>
-                            <div className="flex gap-2 items-center">
-                                <input
-                                    type="color"
-                                    value={textColor}
-                                    onChange={(e) => changeColor(e.target.value)}
-                                    className="w-10 h-10 rounded-lg bg-transparent border border-slate-700 cursor-pointer overflow-hidden p-0"
-                                />
-                                <select
-                                    value={activeFont}
-                                    onChange={(e) => changeFont(e.target.value)}
-                                    className="flex-grow bg-slate-800 border border-slate-700 text-white text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block p-2.5 outline-none custom-select"
-                                >
-                                    {FONTS.map(font => (
-                                        <option key={font} value={font} style={{ fontFamily: font }}>
-                                            {font.split(',')[0]}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="space-y-3">
-                        <label className="text-xs font-semibold text-slate-500 uppercase tracking-wider block flex items-center gap-2">
-                            <Smile className="w-3 h-3" /> Emojis
-                        </label>
-                        <div className="grid grid-cols-5 gap-2 max-h-48 overflow-y-auto p-1 custom-scrollbar">
-                            {EMOJIS.map(emoji => (
-                                <button
-                                    key={emoji}
-                                    onClick={() => addEmoji(emoji)}
-                                    className="w-10 h-10 flex items-center justify-center bg-slate-800/50 hover:bg-slate-700 rounded-lg border border-slate-700/50 transition-colors text-xl hover:scale-110 active:scale-95"
-                                >
-                                    {emoji}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800 grid grid-cols-2 gap-3">
-                        <button
-                            onClick={deleteSelected}
-                            className="flex items-center justify-center gap-2 p-3 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-xl transition-all border border-red-500/20 group"
-                        >
-                            <Trash2 className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                            <span className="font-semibold text-xs">Delete</span>
-                        </button>
-
-                        <button
-                            onClick={clearCanvas}
-                            className="flex items-center justify-center gap-2 p-3 bg-slate-800 hover:bg-slate-700 text-slate-400 rounded-xl transition-all border border-slate-700 group"
-                        >
-                            <RotateCcw className="w-4 h-4 group-hover:-rotate-45 transition-transform" />
-                            <span className="font-semibold text-xs">Clear</span>
+                    <div className="flex items-center gap-3">
+                        <button onClick={downloadMeme} className="flex items-center gap-2 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded text-xs font-bold transition-all shadow-lg shadow-indigo-600/20">
+                            <Download className="w-3.5 h-3.5" />
+                            EXPORT
                         </button>
                     </div>
                 </div>
 
-                <button
-                    onClick={downloadMeme}
-                    className="flex items-center justify-center gap-3 w-full p-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl transition-all shadow-xl shadow-emerald-600/20 group hover:-translate-y-1 active:translate-y-0"
-                >
-                    <Download className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
-                    <span className="text-lg font-bold">Download Meme</span>
-                </button>
+                {/* Canvas Area with Infinite Grid */}
+                <div ref={workspaceRef} className="flex-grow relative overflow-auto custom-scrollbar flex items-center justify-center p-24 bg-[#0a0a0c]">
+                    {/* Infinite Grid Background */}
+                    <div className="absolute inset-0 pointer-events-none opacity-20"
+                        style={{
+                            backgroundImage: `linear-gradient(#1e1e22 1px, transparent 1px), linear-gradient(90deg, #1e1e22 1px, transparent 1px)`,
+                            backgroundSize: '40px 40px',
+                            backgroundPosition: 'center center'
+                        }}
+                    />
+
+                    {/* Canvas Container */}
+                    <div className="relative group">
+                        {/* The Canvas */}
+                        <div className="shadow-[0_0_100px_rgba(0,0,0,0.8)] border border-white/10">
+                            <canvas ref={canvasRef} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Status Bar */}
+                <div className="h-8 border-t border-white/5 bg-[#141416] flex items-center justify-end px-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2 bg-[#1e1e22] px-2 py-0.5 rounded">
+                            <ZoomOut className="w-3 h-3 cursor-pointer hover:text-white" />
+                            <span className="font-mono">{Math.round(zoom * 100)}%</span>
+                            <ZoomIn className="w-3 h-3 cursor-pointer hover:text-white" />
+                        </div>
+                        <span className="font-mono">800x600</span>
+                    </div>
+                </div>
             </div>
 
-            {/* Canvas Area */}
-            <div className="flex-grow flex flex-col items-center">
-                <div className="glass p-2 rounded-2xl border border-slate-800 shadow-2xl relative group">
-                    <canvas ref={canvasRef} className="rounded-xl shadow-inner max-w-full h-auto" />
+            {/* 3. RIGHT INSPECTOR: Properties & Layers */}
+            <div className="w-[300px] bg-[#141416] border-l border-white/5 flex flex-col shrink-0">
+                {/* Inspector Header */}
+                <div className="h-12 border-b border-white/5 flex items-center px-4 gap-2">
+                    <Sliders className="w-4 h-4 text-indigo-400" />
+                    <span className="text-xs font-bold uppercase tracking-widest">Properties</span>
+                </div>
 
-                    {fabricCanvasRef.current && fabricCanvasRef.current.getObjects().length === 0 && (
-                        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-20 group-hover:opacity-10 transition-opacity">
-                            <ImageIcon className="w-24 h-24 text-slate-400 mb-4" />
-                            <p className="text-xl font-bold text-slate-400 uppercase tracking-tighter">Your Meme Canvas</p>
+                <div className="flex-grow overflow-y-auto custom-scrollbar">
+                    {selectedObject ? (
+                        <div className="p-4 space-y-6">
+                            {/* Color Property */}
+                            <PropertySection label="Appearance">
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase">Fill Color</span>
+                                        <div className="flex items-center gap-2">
+                                            <span className="text-[10px] font-mono text-slate-400">{textColor}</span>
+                                            <div className="w-6 h-6 rounded border border-white/10 overflow-hidden relative group">
+                                                <input
+                                                    type="color"
+                                                    value={textColor}
+                                                    onChange={(e) => changeColor(e.target.value)}
+                                                    className="absolute inset-0 w-full h-full cursor-pointer opacity-0"
+                                                />
+                                                <div className="w-full h-full pointer-events-none" style={{ background: textColor }} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="grid grid-cols-6 gap-2">
+                                        {['#ffffff', '#000000', '#ef4444', '#10b981', '#3b82f6', '#f59e0b'].map(c => (
+                                            <button key={c} onClick={() => changeColor(c)} className="w-full aspect-square rounded border border-white/5" style={{ background: c }} />
+                                        ))}
+                                    </div>
+                                </div>
+                            </PropertySection>
+
+                            {/* Font Property */}
+                            {(selectedObject.type === 'textbox' || selectedObject.type === 'i-text') && (
+                                <PropertySection label="Typography">
+                                    <div className="space-y-4">
+                                        <div className="relative">
+                                            <select
+                                                value={activeFont}
+                                                onChange={(e) => changeFont(e.target.value)}
+                                                className="w-full bg-[#1e1e22] border border-white/5 text-[11px] rounded px-3 py-2 outline-none appearance-none font-bold"
+                                            >
+                                                {FONTS.map(f => (
+                                                    <option key={f} value={f} style={{ fontFamily: f }}>{f.split(',')[0]}</option>
+                                                ))}
+                                            </select>
+                                            <ChevronDown className="absolute right-3 top-2.5 w-3 h-3 text-slate-500 pointer-events-none" />
+                                        </div>
+                                        <div className="grid grid-cols-4 gap-2">
+                                            <button className="p-2 bg-[#1e1e22] rounded hover:bg-[#252529] font-bold text-xs border border-white/5">B</button>
+                                            <button className="p-2 bg-[#1e1e22] rounded hover:bg-[#252529] italic text-xs border border-white/5">I</button>
+                                            <button className="p-2 bg-[#1e1e22] rounded hover:bg-[#252529] text-xs border border-white/5">U</button>
+                                            <button className="p-2 bg-[#1e1e22] rounded hover:bg-[#252529] text-xs border border-white/5">S</button>
+                                        </div>
+                                    </div>
+                                </PropertySection>
+                            )}
+
+                            {/* Actions */}
+                            <PropertySection label="Selection Tools">
+                                <div className="grid grid-cols-1 gap-2">
+                                    <button onClick={deleteSelected} className="flex items-center justify-center gap-2 p-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded border border-red-500/20 text-[10px] font-bold tracking-widest transition-all">
+                                        <Trash2 className="w-3.5 h-3.5" />
+                                        DELETE OBJECT
+                                    </button>
+                                    <button onClick={() => { fabricCanvasRef.current.centerObject(selectedObject); fabricCanvasRef.current.renderAll(); }} className="p-2.5 bg-[#1e1e22] hover:bg-[#252529] text-slate-400 rounded border border-white/5 text-[10px] font-bold tracking-widest transition-all">
+                                        ALIGN CENTER
+                                    </button>
+                                </div>
+                            </PropertySection>
+                        </div>
+                    ) : (
+                        <div className="flex flex-col items-center justify-center h-64 text-center px-8 opacity-30">
+                            <MousePointer2 className="w-10 h-10 mb-4" />
+                            <span className="text-[10px] font-bold uppercase tracking-[0.2em]">No Selection</span>
+                            <p className="text-[10px] mt-2">Select an element on canvas to edit properties</p>
                         </div>
                     )}
                 </div>
+            </div>
 
-                <div className="mt-4 flex flex-col items-center gap-2">
-                    <div className="flex gap-4 text-xs text-slate-500">
-                        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">Delete</kbd> Remove Selected</span>
-                        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">Ctrl+Z</kbd> Undo</span>
-                        <span className="flex items-center gap-1"><kbd className="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">Ctrl+Y</kbd> Redo</span>
+            {/* Floating Assets Drawer (Contextual) */}
+            {activeTool === 'emoji' && (
+                <div className="absolute left-[70px] top-4 bottom-4 w-64 bg-[#141416] border border-white/10 rounded-lg shadow-2xl z-50 flex flex-col animate-in slide-in-from-left-4 duration-200">
+                    <div className="p-4 border-b border-white/5 flex items-center justify-between">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-400">Emoji Assets</span>
+                        <button onClick={() => setActiveTool('select')} className="text-slate-500 hover:text-white transition-colors">
+                            <X className="w-4 h-4" />
+                        </button>
+                    </div>
+                    <div className="p-4 grid grid-cols-4 gap-3 overflow-y-auto custom-scrollbar">
+                        {EMOJIS.map(e => (
+                            <button key={e} onClick={() => addEmoji(e)} className="text-3xl hover:scale-125 transition-transform active:scale-95">{e}</button>
+                        ))}
                     </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };
+
+const ToolButton = ({ active, onClick, icon, label, asDiv }) => {
+    const Component = asDiv ? 'div' : 'button';
+    return (
+        <Component
+            onClick={onClick}
+            title={label}
+            className={cn(
+                "p-3 rounded transition-all duration-200 group relative",
+                active ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30" : "text-slate-500 hover:bg-white/5 hover:text-white"
+            )}
+        >
+            {icon}
+            {!active && (
+                <div className="absolute left-full ml-3 px-2 py-1 bg-black text-[10px] font-bold uppercase tracking-widest text-white rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-[100] border border-white/10">
+                    {label}
+                </div>
+            )}
+        </Component>
+    );
+};
+
+const PropertySection = ({ label, children }) => (
+    <div className="space-y-4">
+        <label className="text-[10px] font-bold text-slate-600 uppercase tracking-widest block">{label}</label>
+        {children}
+    </div>
+);
 
 export default MemeEditor;

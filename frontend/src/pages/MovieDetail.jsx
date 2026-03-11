@@ -50,7 +50,7 @@ const MovieDetail = () => {
     return (
         <div className="space-y-12 pb-12">
             {/* Backdrop & Hero */}
-            <section className="relative -mt-8 -mx-4 h-[400px] md:h-[600px] overflow-hidden">
+            <section className="relative -mx-4 h-[400px] md:h-[600px] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10" />
                 <img
                     src={getImageUrl(movie.backdrop_path, "original")}

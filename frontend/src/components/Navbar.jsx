@@ -17,8 +17,8 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="sticky top-0 z-50 glass border-b border-slate-800">
-            <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <nav className="sticky top-4 z-50">
+            <div className="max-w-[1440px] w-[calc(100%-32px)] mx-auto h-16 glass rounded-2xl border border-white/10 shadow-2xl flex items-center justify-between px-6">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 group">
                     <div className="p-2 bg-indigo-600 rounded-lg group-hover:bg-indigo-500 transition-colors">
