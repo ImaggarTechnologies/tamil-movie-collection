@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import DisclaimerPopup from './components/DisclaimerPopup';
@@ -19,9 +20,10 @@ const StandardLayout = ({ children }) => (
 const AppContent = () => {
   const location = useLocation();
   const isEditor = location.pathname === '/meme-editor';
+  const { theme, isDarkMode } = useTheme();
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 flex flex-col">
+    <div className={`min-h-screen ${isDarkMode ? theme.bg : 'bg-gradient-to-tr from-white via-slate-50 to-slate-100'} ${theme.text} flex flex-col`}>
       <Navbar />
       <Routes>
         <Route path="/" element={<StandardLayout><HomePage /></StandardLayout>} />
@@ -32,16 +34,18 @@ const AppContent = () => {
         <Route path="*" element={<StandardLayout><NotFound /></StandardLayout>} />
       </Routes>
       {!isEditor && <Footer />}
-      <DisclaimerPopup />
+      {!isEditor && <DisclaimerPopup />}
     </div>
   );
 };
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

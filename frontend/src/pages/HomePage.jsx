@@ -4,6 +4,7 @@ import MovieCard from '../components/MovieCard';
 import { ChevronLeft, ChevronRight, Loader2, Film } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
+import { useTheme } from '../context/ThemeContext';
 
 const HomePage = () => {
     const [movies, setMovies] = useState([]);
@@ -11,6 +12,7 @@ const HomePage = () => {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [error, setError] = useState(null);
+    const { isDarkMode, theme } = useTheme();
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -52,8 +54,8 @@ const HomePage = () => {
             {/* Movie Grid Section */}
             <section className="space-y-8">
                 <div className="flex items-center justify-between">
-                    <h2 className="text-2xl font-bold border-l-4 border-indigo-500 pl-4">Latest Movies</h2>
-                    <div className="text-slate-500 text-sm">
+                    <h2 className={`text-2xl font-bold border-l-4 border-indigo-500 pl-4 ${theme.text}`}>Latest Movies</h2>
+                    <div className={`${theme.textTertiary} text-sm`}>
                         Page {page} of {totalPages}
                     </div>
                 </div>
@@ -75,7 +77,7 @@ const HomePage = () => {
                             <button
                                 disabled={page === 1}
                                 onClick={() => setPage(p => p - 1)}
-                                className="p-2 bg-slate-900 border border-slate-700 rounded-full disabled:opacity-30 hover:bg-slate-800 transition-colors"
+                                className={`p-2 ${isDarkMode ? 'bg-slate-900 border-slate-700' : 'bg-white border-slate-200'} border rounded-full disabled:opacity-30 ${isDarkMode ? 'hover:bg-slate-800' : 'hover:bg-slate-100'} transition-colors`}
                             >
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
@@ -96,7 +98,7 @@ const HomePage = () => {
                                                 "w-10 h-10 rounded-full text-sm font-bold transition-all",
                                                 page === pageNum
                                                     ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20"
-                                                    : "bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800"
+                                                    : isDarkMode ? "bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800" : "bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100"
                                             )}
                                         >
                                             {pageNum}
@@ -108,7 +110,7 @@ const HomePage = () => {
                             <button
                                 disabled={page === totalPages}
                                 onClick={() => setPage(p => p + 1)}
-                                className="p-2 bg-slate-900 border border-slate-700 rounded-full disabled:opacity-30 hover:bg-slate-800 transition-colors"
+                                className={`p-2 ${isDarkMode ? 'bg-slate-900 border-slate-700' : 'bg-white border-slate-200'} border rounded-full disabled:opacity-30 ${isDarkMode ? 'hover:bg-slate-800' : 'hover:bg-slate-100'} transition-colors`}
                             >
                                 <ChevronRight className="w-6 h-6" />
                             </button>

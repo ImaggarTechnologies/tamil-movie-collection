@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Info, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const DisclaimerPopup = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const { isDarkMode, theme } = useTheme();
 
     useEffect(() => {
         // Show after a short delay
@@ -32,11 +34,11 @@ const DisclaimerPopup = () => {
                     initial={{ opacity: 0, x: -50, scale: 0.9 }}
                     animate={{ opacity: 1, x: 0, scale: 1 }}
                     exit={{ opacity: 0, x: -20, scale: 0.9 }}
-                    className="fixed bottom-6 left-6 z-[100] max-w-[340px] bg-slate-900/90 backdrop-blur-xl border border-white/10 p-5 rounded-2xl shadow-2xl movie-card-shadow text-left"
+                    className={`fixed bottom-6 left-6 z-[100] max-w-[340px] ${isDarkMode ? 'bg-slate-900/90 border-white/10' : 'bg-white/90 border-slate-200'} backdrop-blur-xl border p-5 rounded-2xl shadow-2xl movie-card-shadow text-left`}
                 >
                     <button
                         onClick={handleClose}
-                        className="absolute top-3 right-3 p-1 text-slate-500 hover:text-white transition-colors"
+                        className={`absolute top-3 right-3 p-1 ${isDarkMode ? 'text-slate-500 hover:text-white' : 'text-slate-700 hover:text-slate-900'} transition-colors`}
                     >
                         <X className="w-4 h-4" />
                     </button>
@@ -46,10 +48,10 @@ const DisclaimerPopup = () => {
                             <Info className="w-4 h-4 text-indigo-400" />
                         </div>
                         <div className="space-y-2">
-                            <p className="text-[13px] text-slate-200 leading-relaxed font-medium">
+                            <p className={`text-[13px] ${isDarkMode ? 'text-slate-200' : 'text-slate-800'} leading-relaxed font-medium`}>
                                 All movie titles, posters, and media belong to their respective production and distribution companies.
                             </p>
-                            <p className="text-[11px] text-slate-500 leading-relaxed">
+                            <p className={`text-[11px] ${isDarkMode ? 'text-slate-500' : 'text-slate-600'} leading-relaxed`}>
                                 This site is for informational purposes only. All rights reserved to the original copyright owners.
                             </p>
                         </div>

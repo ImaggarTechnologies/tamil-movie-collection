@@ -4,12 +4,15 @@ import { movieApi, personApi } from '../api';
 import MovieCard from '../components/MovieCard';
 import PersonCard from '../components/PersonCard';
 import { Search, Loader2, Frown } from 'lucide-react';
+import { cn } from '../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const SearchPage = () => {
     const [searchParams] = useSearchParams();
     const query = searchParams.get('q') || '';
 
+    const { isDarkMode, theme } = useTheme();
     const [movieResults, setMovieResults] = useState([]);
     const [personResults, setPersonResults] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -50,35 +53,48 @@ const SearchPage = () => {
         <div className="space-y-12 pb-12">
             {/* Search Header */}
             <section className="text-center space-y-6 pt-8">
-                <div className="inline-flex items-center justify-center p-4 bg-indigo-500/10 rounded-full border border-indigo-500/20 mb-4">
+                <div className={cn(
+                    "inline-flex items-center justify-center p-4 rounded-full border mb-4",
+                    isDarkMode ? "bg-indigo-500/10 border-indigo-500/20" : "bg-white/80 border-slate-200"
+                )}>
                     <Search className="w-8 h-8 text-indigo-400" />
                 </div>
-                <h1 className="text-3xl md:text-5xl font-black text-white">
+                <h1 className={cn("text-3xl md:text-5xl font-black", theme.text)}>
                     Search Results for <span className="text-indigo-400">"{query}"</span>
                 </h1>
-                <p className="text-slate-400">
+                <p className={theme.textSecondary}>
                     Found {movieResults.length} movies and {personResults.length} people
                 </p>
             </section>
 
             {/* Tabs */}
-            <div className="flex justify-center border-b border-slate-900 sticky top-16 z-30 glass py-2 -mx-4 px-4">
-                <div className="flex bg-slate-900 p-1 rounded-xl border border-slate-800">
+            <div className={cn(
+                "flex justify-center sticky top-16 z-30 py-2 -mx-4 px-4",
+                isDarkMode ? "border-b border-slate-900" : "border-b border-slate-200"
+            )}>
+                <div className={cn(
+                    "flex p-1 rounded-xl border",
+                    isDarkMode ? "bg-slate-900 border-slate-800" : "bg-white border-slate-200"
+                )}>
                     <button
                         onClick={() => setActiveTab('movies')}
-                        className={`px-8 py-2 rounded-lg text-sm font-bold transition-all ${activeTab === 'movies'
-                            ? 'bg-indigo-600 text-white shadow-lg'
-                            : 'text-slate-400 hover:text-white'
-                            }`}
+                        className={cn(
+                            "px-8 py-2 rounded-lg text-sm font-bold transition-all",
+                            activeTab === 'movies'
+                                ? 'bg-indigo-600 text-white shadow-lg'
+                                : isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-700 hover:text-slate-900'
+                        )}
                     >
                         Movies ({movieResults.length})
                     </button>
                     <button
                         onClick={() => setActiveTab('persons')}
-                        className={`px-8 py-2 rounded-lg text-sm font-bold transition-all ${activeTab === 'persons'
-                            ? 'bg-indigo-600 text-white shadow-lg'
-                            : 'text-slate-400 hover:text-white'
-                            }`}
+                        className={cn(
+                            "px-8 py-2 rounded-lg text-sm font-bold transition-all",
+                            activeTab === 'persons'
+                                ? 'bg-indigo-600 text-white shadow-lg'
+                                : isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-700 hover:text-slate-900'
+                        )}
                     >
                         People ({personResults.length})
                     </button>

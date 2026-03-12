@@ -2,15 +2,17 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { personApi } from '../api';
 import MovieCard from '../components/MovieCard';
-import { getImageUrl, formatDate } from '../lib/utils';
+import { getImageUrl, formatDate, cn } from '../lib/utils';
 import { Loader2, ArrowLeft, MapPin, Calendar, Star, Film } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const PersonDetail = () => {
     const { id } = useParams();
     const [person, setPerson] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { isDarkMode, theme } = useTheme();
 
     useEffect(() => {
         const fetchPerson = async () => {
@@ -40,7 +42,7 @@ const PersonDetail = () => {
 
     if (error || !person) return (
         <div className="flex flex-col items-center justify-center h-[60vh] gap-4">
-            <p className="text-xl text-slate-400">{error || "Person not found"}</p>
+            <p className={`text-xl ${theme.textTertiary}`}>{error || "Person not found"}</p>
             <Link to="/" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors">
                 <ArrowLeft className="w-4 h-4" /> Back to Home
             </Link>
@@ -65,36 +67,36 @@ const PersonDetail = () => {
                     </div>
 
                     <div className="mt-8 space-y-6 px-4">
-                        <h3 className="font-bold text-slate-100 uppercase tracking-widest text-sm border-b border-slate-800 pb-2">Personal Info</h3>
-                        <div className="space-y-4 text-sm">
+                        <h3 className={`font-bold uppercase tracking-widest text-sm border-b pb-2 ${isDarkMode ? 'text-slate-100 border-slate-800' : 'text-slate-700 border-slate-200'}`}>Personal Info</h3>
+                        <div className={`space-y-4 text-sm ${theme.text}`}>
                             <div className="flex items-center gap-3">
                                 <Calendar className="w-4 h-4 text-indigo-400" />
                                 <div>
-                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">Birthday</p>
-                                    <p className="text-slate-300">{formatDate(person.birthday)}</p>
+                                    <p className={`text-xs uppercase tracking-widest font-bold ${theme.textTertiary}`}>Birthday</p>
+                                    <p className={theme.textSecondary}>{formatDate(person.birthday)}</p>
                                 </div>
                             </div>
                             {person.birthplace && (
                                 <div className="flex items-center gap-3">
                                     <MapPin className="w-4 h-4 text-indigo-400" />
                                     <div>
-                                        <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">Place of Birth</p>
-                                        <p className="text-slate-300">{person.birthplace}</p>
+                                        <p className={`text-xs uppercase tracking-widest font-bold ${theme.textTertiary}`}>Place of Birth</p>
+                                        <p className={theme.textSecondary}>{person.birthplace}</p>
                                     </div>
                                 </div>
                             )}
                             <div className="flex items-center gap-3">
                                 <Star className="w-4 h-4 text-indigo-400" />
                                 <div>
-                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">Popularity</p>
-                                    <p className="text-slate-300">{person.popularity?.toFixed(2)}</p>
+                                    <p className={`text-xs uppercase tracking-widest font-bold ${theme.textTertiary}`}>Popularity</p>
+                                    <p className={theme.textSecondary}>{person.popularity?.toFixed(2)}</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-3">
                                 <Film className="w-4 h-4 text-indigo-400" />
                                 <div>
-                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-widest">Known For</p>
-                                    <p className="text-slate-300">{person.known_for_department}</p>
+                                    <p className={`text-xs uppercase tracking-widest font-bold ${theme.textTertiary}`}>Known For</p>
+                                    <p className={theme.textSecondary}>{person.known_for_department}</p>
                                 </div>
                             </div>
                         </div>
@@ -107,12 +109,12 @@ const PersonDetail = () => {
                     className="flex-grow space-y-10"
                 >
                     <div className="space-y-4">
-                        <h1 className="text-5xl md:text-7xl font-black text-white">{person.name}</h1>
+                        <h1 className={`text-5xl md:text-7xl font-black ${theme.text}`}>{person.name}</h1>
                     </div>
 
                     <div className="space-y-6">
-                        <h2 className="text-2xl font-bold border-l-4 border-indigo-500 pl-4 uppercase tracking-wider">Biography</h2>
-                        <p className="text-lg text-slate-300 leading-relaxed max-w-4xl">
+                        <h2 className={`text-2xl font-bold border-l-4 border-indigo-500 pl-4 uppercase tracking-wider ${theme.text}`}>Biography</h2>
+                        <p className={`text-lg leading-relaxed max-w-4xl ${theme.textSecondary}`}>
                             {person.biography || `We don't have a biography for ${person.name} yet.`}
                         </p>
                     </div>
@@ -135,27 +137,36 @@ const PersonDetail = () => {
             {person.all_movie_credits?.length > 0 && (
                 <section className="space-y-8">
                     <h2 className="text-2xl font-bold border-l-4 border-indigo-500 pl-4 uppercase tracking-wider">Full Credits</h2>
-                    <div className="glass rounded-3xl overflow-hidden border-slate-800">
+                    <div className={cn(
+                        "rounded-3xl overflow-hidden border transition-all",
+                        isDarkMode ? "glass border-white/10" : "bg-white border-slate-200 shadow-sm"
+                    )}>
                         <table className="w-full text-left border-collapse">
                             <thead>
-                                <tr className="bg-slate-900/50 border-b border-slate-800">
-                                    <th className="px-6 py-4 text-xs font-bold uppercase tracking-widest text-slate-500">Year</th>
-                                    <th className="px-6 py-4 text-xs font-bold uppercase tracking-widest text-slate-500">Title</th>
-                                    <th className="px-6 py-4 text-xs font-bold uppercase tracking-widest text-slate-500">Character</th>
+                                <tr className={cn(
+                                    "border-b transition-colors",
+                                    isDarkMode ? "bg-slate-900/50 border-white/5 whitespace-nowrap" : "bg-slate-50 border-slate-200"
+                                )}>
+                                    <th className={cn("px-6 py-4 text-xs font-bold uppercase tracking-widest", isDarkMode ? "text-slate-500" : "text-slate-400")}>Year</th>
+                                    <th className={cn("px-6 py-4 text-xs font-bold uppercase tracking-widest", isDarkMode ? "text-slate-500" : "text-slate-400")}>Title</th>
+                                    <th className={cn("px-6 py-4 text-xs font-bold uppercase tracking-widest", isDarkMode ? "text-slate-500" : "text-slate-400")}>Character</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {person.all_movie_credits
                                     .sort((a, b) => new Date(b.release_date) - new Date(a.release_date))
                                     .map((credit, idx) => (
-                                        <tr key={idx} className="border-b border-slate-900 hover:bg-white/5 transition-colors">
-                                            <td className="px-6 py-4 text-slate-400 font-medium">
+                                        <tr key={idx} className={cn(
+                                            "border-b last:border-0 transition-colors",
+                                            isDarkMode ? "border-white/5 hover:bg-white/5" : "border-slate-100 hover:bg-slate-50 shadow-sm"
+                                        )}>
+                                            <td className={cn("px-6 py-4 font-medium", isDarkMode ? "text-slate-400" : "text-slate-500")}>
                                                 {credit.release_date ? new Date(credit.release_date).getFullYear() : '—'}
                                             </td>
                                             <td className="px-6 py-4">
-                                                <span className="text-slate-100 font-bold">{credit.title}</span>
+                                                <span className={cn("font-bold", isDarkMode ? "text-slate-100" : "text-slate-900")}>{credit.title}</span>
                                             </td>
-                                            <td className="px-6 py-4 text-slate-500 italic">
+                                            <td className={cn("px-6 py-4 italic", isDarkMode ? "text-slate-500" : "text-slate-400")}>
                                                 {credit.character || '—'}
                                             </td>
                                         </tr>
