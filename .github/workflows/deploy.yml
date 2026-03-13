@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -29,10 +29,12 @@ jobs:
           npm run build
 
       - name: Deploy to Hostinger
-        uses: SamKirkland/web-deploy@v1
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.openmeme.in
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote-path: public_html
-          local-path: frontend/dist
+          protocol: ftps
+          port: 21
+          local-dir: ./frontend/dist/
+          server-dir: public_html/
