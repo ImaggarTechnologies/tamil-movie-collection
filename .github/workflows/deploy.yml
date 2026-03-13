@@ -1,4 +1,4 @@
-name: Deploy to Hostinger FTP
+name: Deploy to Hostinger
 
 on:
   push:
@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -23,15 +23,15 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build frontend
+      - name: Build project
         run: |
           cd frontend
           npm run build
 
-      - name: Deploy to Hostinger
+      - name: Upload to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: 82.25.125.254
+          server: ftp.openmeme.in
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
