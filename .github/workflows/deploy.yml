@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Install frontend dependencies
+      - name: Install dependencies
         run: |
           cd frontend
           npm install
@@ -28,7 +28,7 @@ jobs:
           cd frontend
           npm run build
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: 82.25.125.254
@@ -36,5 +36,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./frontend/dist/
+          local-dir: frontend/dist/
           server-dir: public_html/
