@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -23,18 +23,16 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build Vite project
+      - name: Build Vite
         run: |
           cd frontend
           npm run build
 
-      - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Upload files to Hostinger
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: 82.25.125.254
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          local-dir: frontend/dist/
-          server-dir: /
+          host: ${{ secrets.HOSTINGER_HOST }}
+          username: ${{ secrets.HOSTINGER_USER }}
+          password: ${{ secrets.HOSTINGER_PASSWORD }}
+          source: "frontend/dist/*"
+          target: "public_html"
