@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,7 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build project
+      - name: Build Vite project
         run: |
           cd frontend
           npm run build
@@ -36,6 +36,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./frontend/dist/
-          server-dir: ./public_html/
+          local-dir: frontend/dist/
+          server-dir: /
           dangerous-clean-slate: true
