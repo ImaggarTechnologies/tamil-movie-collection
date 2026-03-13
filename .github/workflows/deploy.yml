@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,16 +23,16 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build Vite
+      - name: Build project
         run: |
           cd frontend
           npm run build
 
-      - name: Upload files to Hostinger
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy to Hostinger
+        uses: SamKirkland/web-deploy@v1
         with:
-          host: ${{ secrets.HOSTINGER_HOST }}
-          username: ${{ secrets.HOSTINGER_USER }}
-          password: ${{ secrets.HOSTINGER_PASSWORD }}
-          source: "frontend/dist/*"
-          target: "public_html"
+          server: ftp.openmeme.in
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          remote-path: public_html
+          local-path: frontend/dist
