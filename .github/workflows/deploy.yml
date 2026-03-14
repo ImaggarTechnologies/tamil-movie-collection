@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -29,10 +28,10 @@ jobs:
           cd frontend
           npm run build
 
-      - name: Deploy to Hostinger
+      - name: Deploy to Hostinger via SSH
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: in-mum-web1950.hostinger.com
+          host: 82.25.125.254
           username: u922532677
           password: ${{ secrets.SSH_PASSWORD }}
           port: 65002
