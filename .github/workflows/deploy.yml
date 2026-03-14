@@ -1,4 +1,4 @@
-name: Deploy Site
+name: Deploy Vite Site to Hostinger
 
 on:
   push:
@@ -10,31 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           cd frontend
           npm install
 
-      - name: Build project
+      - name: Build Vite Project
         run: |
           cd frontend
           npm run build
 
       - name: Deploy dist to Hostinger
-        uses: appleboy/scp-action@v0.1.7
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_SERVER }}
+          protocol: ftps
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          
-          source: "frontend/dist/*"
-          target: "public_html"
+          local-dir: frontend/dist/
+          server-dir: public_html/
