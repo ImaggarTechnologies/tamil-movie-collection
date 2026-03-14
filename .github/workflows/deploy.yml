@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -23,12 +23,12 @@ jobs:
           cd frontend
           npm install
 
-      - name: Build Vite project
+      - name: Build project
         run: |
           cd frontend
           npm run build
 
-      - name: Deploy dist to Hostinger via SSH
+      - name: Deploy dist to Hostinger
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
