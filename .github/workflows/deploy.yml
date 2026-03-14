@@ -35,5 +35,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 65002
-          source: "frontend/dist/*"
-          target: "public_html/"
+          source: "frontend/dist/"
+          target: "public_html"
+          strip_components: 2
