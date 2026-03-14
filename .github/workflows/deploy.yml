@@ -37,3 +37,4 @@ jobs:
           port: 65002
           source: "frontend/dist/*"
           target: "/home/u922532677/domains/openmeme.in/public_html/"
+          strip_components: 2
