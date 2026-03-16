@@ -1,0 +1,40 @@
+name: Deploy Openmeme Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm install
+
+      - name: Build Project
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Deploy to Hostinger via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 82.25.125.254
+          username: u922532677
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 65002
+          source: "frontend/dist/*"
+          target: "/home/u922532677/domains/openmeme.in/public_html/"
+          strip_components: 2
