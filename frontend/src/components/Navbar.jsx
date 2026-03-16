@@ -24,7 +24,7 @@ const Navbar = () => {
         <nav className="sticky top-4 z-50 px-4">
             <div className={`container mx-auto h-16 ${theme.card} rounded-2xl border ${theme.border} shadow-2xl flex items-center justify-between px-6`}>
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-2 group">
+                <Link to="/home" className="flex items-center gap-2 group">
                     <div className={`p-2 rounded-lg transition-colors ${isDarkMode ? 'bg-indigo-600 group-hover:bg-indigo-500' : 'bg-slate-100 group-hover:bg-slate-200 border border-slate-300'}`}>
                         <Film className={`w-5 h-5 ${isDarkMode ? 'text-white' : 'text-slate-700'}`} />
                     </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
                     </form>
                     <div className="flex flex-col gap-2">
                         <Link
-                            to="/"
+                            to="/home"
                             className={cn(
                                 "p-2 rounded-lg transition-colors",
                                 isDarkMode ? "hover:bg-slate-800 text-slate-100" : "hover:bg-slate-100 text-slate-800"
