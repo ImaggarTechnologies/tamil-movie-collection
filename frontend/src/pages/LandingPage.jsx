@@ -1,11 +1,58 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Film, Sparkles, Layout, Image as ImageIcon, Search } from 'lucide-react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { Film, Sparkles, Layout, Image as ImageIcon, Search, ChevronDown, Rocket, PlayCircle, Star, Loader2 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import cinematicBg from '../assets/cinematic_bg.png';
+
+const CinematicBackground = ({ isTransitioning, opacity }) => {
+    return (
+        <motion.div
+            style={{ opacity }}
+            className="absolute inset-0 z-0 overflow-hidden"
+        >
+            <motion.img
+                src={cinematicBg}
+                alt="Cinematic Background"
+                className="w-full h-full object-cover object-top"
+                animate={{
+                    scale: [1, 1.05],
+                    transition: { duration: 25, repeat: Infinity, repeatType: "reverse", ease: "linear" }
+                }}
+            />
+            {/* Very light overlays to ensure text is readable while keeping the image visible */}
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/20" />
+        </motion.div>
+    );
+};
 
 const LandingPage = () => {
     const navigate = useNavigate();
-    const { isDarkMode, theme } = useTheme();
+    const { isDarkMode } = useTheme();
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const containerRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        container: containerRef
+    });
+
+    // Figma-style background color transition (Fixed layer behind everything)
+    const backgroundColor = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],
+        ["#020617", "#0f172a", "#1e1b4b"] // Deep Black -> Slate -> Indigo
+    );
+
+    // Fade the cinematic image as we move to section 2
+    const bgOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+
+    const handleGetStarted = () => {
+        setIsTransitioning(true);
+        setTimeout(() => {
+            navigate('/home');
+        }, 1200);
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -23,88 +70,152 @@ const LandingPage = () => {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.8,
-                ease: "easeOut"
+                duration: 0.6,
+                ease: [0.16, 1, 0.3, 1]
             }
         }
     };
 
     return (
-        <div className={`min-h-screen flex flex-col items-center justify-center relative overflow-hidden ${isDarkMode ? 'bg-slate-950 text-slate-50' : 'bg-slate-50 text-slate-900'}`}>
-            {/* Ambient Background Elements */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/20 blur-[120px] rounded-full" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 blur-[120px] rounded-full" />
-            </div>
+        <div className="relative h-screen bg-slate-950 overflow-hidden">
+            {/* FIXED BACKGROUND COLOR LAYER */}
+            <motion.div
+                style={{ backgroundColor }}
+                className="absolute inset-0 z-[-10]"
+            />
 
-            <motion.div 
-                className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
+            {/* SCROLLABLE CONTENT */}
+            <motion.div
+                ref={containerRef}
+                className="h-full overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar text-slate-50"
             >
-                {/* Hero Section */}
-                <motion.h1 
-                    variants={itemVariants}
-                    className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-[1.1]"
-                >
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                        Open Memes
-                    </span>
-                </motion.h1>
+                <style>{`.hide-scrollbar::-webkit-scrollbar { display: none; } .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }`}</style>
 
-                <motion.p 
-                    variants={itemVariants}
-                    className={`max-w-2xl text-lg md:text-xl ${isDarkMode ? 'text-slate-400' : 'text-slate-600'} mb-10 leading-relaxed`}
-                >
-                    The Ultimate Tamil Movie Database & Creative Meme Studio. Explore the magic of Tamil cinema and create iconic memes all in one place.
-                </motion.p>
+                {/* Section 1: Cinematic Entrance */}
+                <section className="h-screen w-full snap-start relative flex flex-col items-center justify-center overflow-hidden">
+                    <AnimatePresence>
+                        {!isTransitioning && (
+                            <CinematicBackground opacity={bgOpacity} />
+                        )}
+                    </AnimatePresence>
 
-                {/* Main Action Call */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="flex flex-col items-center gap-4 mb-20"
-                >
-                    <button
-                        onClick={() => navigate('/home')}
-                        className="group relative px-8 py-4 bg-indigo-600 text-white rounded-2xl font-bold text-lg overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(79,70,229,0.5)]"
+                    {/* Netflix Iris Wipe */}
+                    {isTransitioning && (
+                        <motion.div
+                            className="fixed inset-0 z-[100] bg-slate-950"
+                            initial={{ clipPath: 'circle(0% at 50% 50%)' }}
+                            animate={{ clipPath: 'circle(150% at 50% 50%)' }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                        />
+                    )}
+
+                    <motion.div
+                        className="relative z-10 container mx-auto px-6 text-center"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        animate={isTransitioning ? { scale: 0.9, opacity: 0, filter: 'blur(10px)' } : {}}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <span className="relative">
-                            Get Started
-                        </span>
-                    </button>
-                </motion.div>
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8">
+                            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                            <span className="text-sm font-medium tracking-wide uppercase">Experience Cinema Like Never Before</span>
+                        </motion.div>
 
-                {/* Features Grid */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl"
-                >
-                    {[
-                        { icon: Film, title: "Curated Library", desc: "Handpicked selection of the best Tamil cinema across all genres." },
-                        { icon: Search, title: "Smart Search", desc: "Find your favorite movies and actors with our advanced search engine." },
-                        { icon: ImageIcon, title: "Meme Studio", desc: "Create and share hilarious memes using our built-in editor." }
-                    ].map((feature, idx) => (
-                        <div 
-                            key={idx}
-                            className={`p-6 rounded-3xl border transition-all duration-300 ${isDarkMode ? 'bg-slate-900/40 border-slate-800 hover:bg-slate-900/60' : 'bg-white/60 border-slate-200 hover:bg-white'} hover:shadow-2xl hover:-translate-y-1`}
+                        <motion.h1
+                            variants={itemVariants}
+                            className="text-7xl md:text-9xl font-extrabold mb-6 tracking-tighter leading-none"
                         >
-                            <div className={`w-12 h-12 rounded-xl mb-4 flex items-center justify-center ${isDarkMode ? 'bg-slate-800' : 'bg-slate-100'}`}>
-                                <feature.icon className="w-6 h-6 text-indigo-500" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                            <p className={isDarkMode ? 'text-slate-400' : 'text-slate-600 text-sm'}>{feature.desc}</p>
-                        </div>
-                    ))}
-                </motion.div>
-            </motion.div>
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                                Open Memes
+                            </span>
+                        </motion.h1>
 
-            {/* Footer decoration */}
-            <div className="mt-20 opacity-50 flex items-center gap-2 text-sm font-medium">
-                <Film className="w-4 h-4" />
-                <span>Tamil Movies Collection © 2026</span>
-            </div>
+                        <motion.p
+                            variants={itemVariants}
+                            className="max-w-2xl mx-auto text-xl md:text-2xl text-slate-300 mb-12 font-light"
+                        >
+                            The Ultimate Tamil Movie Database meets a Creative Meme Studio. A new concept in digital entertainment.
+                        </motion.p>
+
+                        <motion.div variants={itemVariants}>
+                            <button
+                                onClick={handleGetStarted}
+                                disabled={isTransitioning}
+                                className="group relative px-12 py-6 bg-white text-black rounded-full font-black text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-2xl hover:shadow-indigo-500/40"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <span className="relative flex items-center gap-3 group-hover:text-white transition-colors">
+                                    {isTransitioning ? <Loader2 className="w-6 h-6 animate-spin" /> : <>Get Started <Rocket className="w-6 h-6" /></>}
+                                </span>
+                            </button>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Scroll Indicator */}
+                    <motion.div
+                        style={{ opacity: bgOpacity }}
+                        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer opacity-50"
+                        onClick={() => containerRef.current?.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+                    >
+                        <span className="text-xs uppercase tracking-widest font-bold">Discovery</span>
+                        <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
+                            <ChevronDown className="w-6 h-6" />
+                        </motion.div>
+                    </motion.div>
+                </section>
+
+                {/* Section 2: Features */}
+                <section className="min-h-screen w-full snap-start relative flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden">
+                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,#4f46e5_0%,transparent_70%)]" />
+
+                    <motion.div
+                        className="container mx-auto max-w-7xl z-10"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={itemVariants} className="text-center mb-16">
+                            <h2 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">A Universe of Creativity</h2>
+                            <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">One platform, endless possibilities. Discover, search, and create with state-of-the-art tools.</p>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                { icon: Film, title: "Curated Library", color: "indigo", desc: "Handpicked selection of the best Tamil cinema across all genres." },
+                                { icon: Search, title: "Smart Search", color: "purple", desc: "Find any movie, actor, or dialogue in seconds with neural search." },
+                                { icon: Sparkles, title: "Meme Studio", color: "pink", desc: "Turn iconic scenes into viral legends with professional tools." }
+                            ].map((feature, idx) => (
+                                <motion.div
+                                    key={idx}
+                                    variants={itemVariants}
+                                    whileHover={{ y: -10, scale: 1.02 }}
+                                    className="group relative p-10 rounded-[3rem] bg-white/5 border border-white/10 backdrop-blur-2xl transition-all hover:border-indigo-500/50"
+                                >
+                                    <div className={`absolute -right-10 -top-10 w-40 h-40 bg-${feature.color}-500 blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity`} />
+                                    <div className="w-16 h-16 rounded-2xl mb-8 flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-indigo-400/50">
+                                        <feature.icon className={`w-8 h-8 text-${feature.color}-400`} />
+                                    </div>
+                                    <h3 className="text-3xl font-bold mb-4">{feature.title}</h3>
+                                    <p className="text-slate-400 text-lg leading-relaxed">{feature.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+
+                        <motion.div variants={itemVariants} className="mt-24 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 text-slate-500 font-medium">
+                            <div className="flex items-center gap-8">
+                                <span>© 2026 Tamil Movies Collection</span>
+                                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                            </div>
+                            <div className="flex items-center gap-4 px-6 py-2 rounded-full bg-white/5 border border-white/10">
+                                <Star className="w-5 h-5 fill-indigo-500 text-indigo-500" />
+                                <span className="text-slate-300">Crafted for Movie Lovers</span>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                </section>
+            </motion.div>
         </div>
     );
 };
