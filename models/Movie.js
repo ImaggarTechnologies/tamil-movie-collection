@@ -4,33 +4,31 @@ const MovieSchema = new mongoose.Schema(
   {
     tmdb_id: { type: Number, unique: true, required: true },
     title: { type: String, required: true },
-    original_title: { type: String },
+    original_title: String,
     release_year: { type: Number, index: true },
-    release_date: { type: String },
-    overview: { type: String },
-    poster_path: { type: String },
-    backdrop_path: { type: String },
-    genres: [{ type: String }],
-    runtime: { type: Number },
+    release_date: String,
+    overview: String,
+    poster_path: String,
+    backdrop_path: String,
+    genres: [String],
+    runtime: Number,
     language: { type: String, default: "ta" },
-    rating: { type: Number },
-    vote_count: { type: Number },
+    rating: Number,
+    vote_count: Number,
     budget: { type: Number, default: 0 },
     revenue: { type: Number, default: 0 },
-    status: { type: String },
-    tagline: { type: String },
-    production_companies: [{ type: String }],
+    status: String,
+    tagline: String,
+    production_companies: [String],
 
-    // Forward relational mapping → persons
     cast_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: "Person" }],
     crew_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: "Person" }],
   },
   { timestamps: true }
 );
 
-// Indexes for fast queries
+// ✅ Keep useful indexes only
 MovieSchema.index({ release_year: -1 });
-MovieSchema.index({ tmdb_id: 1 });
 MovieSchema.index({ rating: -1 });
 
 module.exports = mongoose.model("Movie", MovieSchema);

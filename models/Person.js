@@ -4,16 +4,15 @@ const PersonSchema = new mongoose.Schema(
   {
     tmdb_id: { type: Number, unique: true, required: true },
     name: { type: String, required: true },
-    profile_path: { type: String },
-    biography: { type: String },
-    birthday: { type: String },
-    deathday: { type: String },
-    birthplace: { type: String },
-    gender: { type: Number },
-    known_for_department: { type: String },
-    popularity: { type: Number },
+    profile_path: String,
+    biography: String,
+    birthday: String,
+    deathday: String,
+    birthplace: String,
+    gender: Number,
+    known_for_department: String,
+    popularity: Number,
 
-    // Reverse relational mapping → movies
     movie_ids: [{ type: mongoose.Schema.Types.ObjectId, ref: "Movie" }],
 
     tmdb_movie_credits: [
@@ -29,7 +28,7 @@ const PersonSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-PersonSchema.index({ tmdb_id: 1 });
+// ✅ Keep only useful indexes
 PersonSchema.index({ name: 1 });
 
 module.exports = mongoose.model("Person", PersonSchema);
