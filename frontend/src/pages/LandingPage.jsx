@@ -4,6 +4,8 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { Film, Sparkles, Layout, Image as ImageIcon, Search, ChevronDown, Rocket, PlayCircle, Star, Loader2 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import cinematicBg from '../assets/cinematic_bg.png';
+import natarajImg from '../assets/Nataraj.jpeg';
+import leoImg from '../assets/Leo Jones Stanley.jpeg';
 
 const CinematicBackground = ({ isTransitioning, opacity }) => {
     return (
@@ -213,6 +215,71 @@ const LandingPage = () => {
                                 <span className="text-slate-300">Crafted for Movie Lovers</span>
                             </div>
                         </motion.div>
+                    </motion.div>
+                </section>
+
+                {/* Section 3: Meet the Founders */}
+                <section className="h-screen w-full snap-start relative flex flex-col items-center justify-center p-6 md:p-12 overflow-hidden">
+                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,#7c3aed_0%,transparent_70%)]" />
+
+                    <motion.div
+                        className="container mx-auto max-w-5xl z-10 text-center"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div variants={itemVariants} className="mb-4">
+                            <span className="text-xs uppercase tracking-[0.3em] text-slate-500 font-semibold">The People Behind It</span>
+                        </motion.div>
+                        <motion.h2 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+                            Meet the <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">Founders</span>
+                        </motion.h2>
+                        <motion.p variants={itemVariants} className="text-slate-400 text-lg mb-20 max-w-xl mx-auto">
+                            The people who brought this to life.
+                        </motion.p>
+
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-20">
+                            {/* Founder 1 - Nataraj */}
+                            <motion.div
+                                variants={itemVariants}
+                                whileHover={{ y: -10, scale: 1.03 }}
+                                className="flex flex-col items-center gap-6 group"
+                            >
+                                <div className="relative">
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 blur-xl opacity-50 scale-110 group-hover:opacity-70 transition-opacity" />
+                                    <img
+                                        src={leoImg}
+                                        alt="Leo Jones Stanley"
+                                        className="relative w-56 h-56 rounded-full object-cover object-top border-2 border-purple-400/60"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="text-white font-bold text-2xl">Leo Jones Stanley</p>
+                                    <p className="text-purple-400 text-base font-medium">Founder</p>
+                                </div>
+                            </motion.div>
+
+                            {/* Founder 2 - Nataraj */}
+                            <motion.div
+                                variants={itemVariants}
+                                whileHover={{ y: -10, scale: 1.03 }}
+                                className="flex flex-col items-center gap-6 group"
+                            >
+                                <div className="relative">
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 blur-xl opacity-50 scale-110 group-hover:opacity-70 transition-opacity" />
+                                    <img
+                                        src={natarajImg}
+                                        alt="Nataraj"
+                                        className="relative w-56 h-56 rounded-full object-cover object-top border-2 border-indigo-400/60"
+                                    />
+                                </div>
+                                <div>
+                                    <p className="text-white font-bold text-2xl">Nataraj</p>
+                                    <p className="text-indigo-400 text-base font-medium">Co-Founder</p>
+                                </div>
+                            </motion.div>
+                        </div>
                     </motion.div>
                 </section>
             </motion.div>
